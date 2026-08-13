@@ -1,14 +1,29 @@
 # DSS Computing Bootcamp 2026
 
-This repository contains the computing bootcamp materials for incoming
-Ph.D. and M.S. students to the Department of Statistical Science at
-Duke University. These materials are adapted from those developed by Shawn Santo, Alex Fischer,
-Mine Çetinkaya-Rundel, and Colin Rundel.
 
-## Content
+Computing bootcamp materials for incoming Ph.D. and M.S. students in the
+Department of Statistical Science at Duke University. These materials
+are adapted from those developed by Shawn Santo, Alex Fischer, Mine
+Çetinkaya-Rundel, and Colin Rundel.
 
-| Topic                           | Slides                                                           |
-|---------------------------------|:----------------------------------------------------------------:|
-| Introduction & Resources        | [:desktop_computer:](https://dukestatsci.github.io/computing_bootcamp_2026/slides/01_introduction_and_resources.html) |
-| Reproducibility, Version Control, & Literate Programming | [:desktop_computer:](https://dukestatsci.github.io/computing_bootcamp_2026/slides/02_reproducible_workflows.html) |
-| Duke Compute Cluster (DCC)               | [:desktop_computer:](https://dukestatsci.github.io/computing_bootcamp_2026/slides/03_dcc.html)            |
+The rendered version of these materials is available at
+<https://dukestatsci.github.io/computing_bootcamp_2026/>.
+
+## Slides
+
+| Session | Topic |
+|:--:|----|
+| 1 | [Introduction & Resources](https://dukestatsci.github.io/computing_bootcamp_2026/slides/01_introduction_and_resources.html) |
+| 2 | [Reproducibility, Version Control, & Literate Programming](https://dukestatsci.github.io/computing_bootcamp_2026/slides/02_reproducible_workflows.html) |
+| 3 | [Duke Compute Cluster (DCC)](https://dukestatsci.github.io/computing_bootcamp_2026/slides/03_dcc.html) |
+
+## Materials
+
+All source files for the slides and in-class activities are available in
+the [GitHub
+repository](https://github.com/DukeStatSci/computing_bootcamp_2026),
+which you will learn to fork and clone during the bootcamp.
+
+The literate programming activity uses the [UN votes
+example](https://dukestatsci.github.io/computing_bootcamp_2026/examples/unvotes.html)
+(`examples/unvotes.qmd` in the repository).

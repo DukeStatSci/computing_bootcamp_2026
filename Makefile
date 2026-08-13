@@ -10,7 +10,15 @@ EXAMPLE_OUTPUTS = $(EXAMPLE_SOURCES:.qmd=.html)
 
 # Default target
 .PHONY: all
-all: slides examples
+all: index slides examples
+
+# Render landing page (index.html) and README.md from the same source
+.PHONY: index
+index: index.html
+
+index.html: index.qmd
+	@echo "Rendering $<..."
+	quarto render "$<" --to all
 
 # Render all slides
 .PHONY: slides
@@ -44,6 +52,7 @@ unvotes: $(EXAMPLES_DIR)/unvotes.html
 .PHONY: clean
 clean:
 	@echo "Cleaning generated files..."
+	rm -f index.html
 	rm -f $(SLIDE_DIR)/*.html
 	rm -f $(EXAMPLES_DIR)/*.html
 	rm -f $(SLIDE_DIR)/*_files
@@ -59,7 +68,8 @@ preview:
 .PHONY: help
 help:
 	@echo "Available targets:"
-	@echo "  all       - Render all slides and examples"
+	@echo "  all       - Render landing page, slides, and examples"
+	@echo "  index     - Render landing page"
 	@echo "  slides    - Render all slide presentations"  
 	@echo "  examples  - Render all example documents"
 	@echo "  intro     - Render introduction slides"
