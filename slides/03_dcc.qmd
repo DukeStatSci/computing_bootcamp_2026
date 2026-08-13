@@ -133,12 +133,12 @@ See the [Data Classification Standard](https://security.duke.edu/policies-proced
 
 | Path | Size | Description | Backups |
 |------|------|-------------|---------|
-| `/work/<netid>` | 650 TB | "Unpartitioned, high speed volume, shared across all users" | None |
-| `/cwork/<netid>` | 830 TB | High speed volume | None |
-| `/hpc/home/<netid>` | 25 GB | "Personal scripts, and other environment setup" | None |
-| `/hpc/group/<groupname>` | 1 TB (expandable) | "Private to each lab group" | 7-day snapshot |
-| `/hpc/dctrl/<netid>` | 500 GB | "Private to each PhD student" | 7-day snapshot |
-| `/datacommons/<groupname>` | Fee-based | "Archival storage" | Optional 30-day backup |
+| `/work/<netid>` | 650 TB | Unpartitioned, high speed volume, shared across all users | None |
+| `/cwork/<netid>` | 830 TB | High speed volume, available to all users | None |
+| `/hpc/home/<netid>` | 25 GB | Personal scripts, and other environment setup | None |
+| `/hpc/group/<groupname>` | 1 TB (expandable) | Private to each lab group | 7-day snapshot |
+| `/hpc/dctrl/<netid>` | 500 GB | Private to each PhD student | 7-day snapshot |
+| `/datacommons/<groupname>` | Fee-based | Archival storage | Optional 30-day backup |
 
 ## Storage usage
 
@@ -161,7 +161,7 @@ For `/work/` and `/cwork/` you may need to create your own folder for your use w
 
 ## Accessing the DCC
 
-All access to the DCC compute nodes is managed through the slurm job scheduler.
+All access to the DCC compute nodes is managed through the SLURM job scheduler.
 
 Traditionally, users would log in to the cluster via SSH and then submit jobs to the scheduler. 
 
@@ -208,7 +208,7 @@ OnDemand generally will let you know which partitions you have access to, but th
 *General use partitions*:
 
 * **interactive** for short interactive sessions, default resources are low.
-* **common** for jobs that will run on the DCC core node
+* **common** for jobs that will run on the DCC core nodes
 * **gpu-common** for jobs that will run on DCC GPU nodes
 * **scavenger** for jobs that will run on lab-owned nodes in “low priority” (kill and requeue preemption).
 * **scavenger-gpu** for GPU jobs that will run on lab-owned nodes in “low priority” (kill and requeue preemption)
@@ -217,7 +217,7 @@ OnDemand generally will let you know which partitions you have access to, but th
 
 Interactive partition:
 
-* 10 CPUs, 64 GB memory
+* 10 CPUs, 64 GB memory, sessions up to 1 day
 
 All other partitions:
 
@@ -227,7 +227,7 @@ All other partitions:
 
 ## Important Job Options
 
-Stat OnDemand has been customized and looks a little bit different but the core job details are basically the same.
+Stats OnDemand has been customized and looks a little bit different but the core job details are basically the same.
 
 After account and partition, the other important job options are:
 

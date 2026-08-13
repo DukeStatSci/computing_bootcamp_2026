@@ -74,7 +74,7 @@ The journal Heart has retracted a 2012 meta-analysis after learning that
 
 Anil Potti was a rising star cancer researcher here at Duke in the School of Medicine. His lab's research focused on precision oncology (genomic signatures that could be used to predict patient response to chemotherapy).
 
-- Work was published in high-profile journals and received significant funding and attention, clinical trails using some of these results were also conducted.
+- Work was published in high-profile journals and received significant funding and attention; clinical trials using some of these results were also conducted.
 
 - Early whistleblower complaints from a medical student were ignored
 
@@ -276,10 +276,11 @@ If you cannot access RStudio via the DSS servers:
     2.  Select `Reserve a Container` and find `RStudio (statistics application with R Markdown and knitr support)`
     3.  Click the link under my reservations to create your environment
 
-- Install R and RStudio locally on your computer
+- Install R and RStudio (or Positron) locally on your computer
 
     - Download R on your computer [here](http://archive.linux.duke.edu/cran/)
-    - Download RStudio [here](https://www.rstudio.com/products/rstudio/download/#download)
+    - Download RStudio [here](https://posit.co/download/rstudio-desktop/)
+    - Download Positron [here](https://positron.posit.co/download.html)
 
 
 ## Bootcamp materials
@@ -486,7 +487,7 @@ In order to get started, you need to obtain today's files from GitHub. The steps
 
 3.  Fork the repository
 
-4.  Copy the link under `Clone or Download` to clone with *SSH*.
+4.  Copy the link under the `Code` button to clone with *SSH*.
 
 5.  In RStudio go to `File > New Project > Version Control > Git`
 
@@ -546,7 +547,7 @@ We will now make sure that everything is working correctly by making changes to 
 
 - [Git cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet) by Atlassian
 
-- GitHub's interactive [tutorial](https://try.github.io/)
+- GitHub's interactive [Skills courses](https://skills.github.com/)
 
 - [Free online course](https://www.udacity.com/course/version-control-with-git--ud123) from Udacity
 
@@ -694,11 +695,11 @@ The `echo: false` option disables the printing of code (only output is displayed
 
 - Tom Mock's [Intro to Quarto webinar](https://jthomasmock.github.io/quarto-2hr-webinar/)
 
-- RStudioConf 2023 workshops
+- rstudio::conf(2022) workshops
 
-  - [Getting Started with Quarto](https://rstudio-conf-2023.github.io/get-started-quarto/)
+  - [Getting Started with Quarto](https://rstudio-conf-2022.github.io/get-started-quarto/)
 
-  - [From R Markdown to Quarto](https://rstudio-conf-2023.github.io/rmd-to-quarto/)
+  - [From R Markdown to Quarto](https://rstudio-conf-2022.github.io/rmd-to-quarto/)
 
 
 # Quarto / RMarkdown demo
@@ -715,8 +716,8 @@ The `echo: false` option disables the printing of code (only output is displayed
   - The tidyverse is an opinionated collection of R packages designed for
     data science. All packages share an underlying design philosophy, grammar,
     and data structures.
-  - The core tidyverse packages consists of `ggplot2`, `tibble`, `tidyr`,
-    `readr`, `purrr`, `dplyr`, `stringr`, and `forcats` packages.
+  - The core tidyverse packages are `ggplot2`, `tibble`, `tidyr`,
+    `readr`, `purrr`, `dplyr`, `stringr`, and `forcats`.
 
 - This package is already installed for you on the DSS servers. If needed, you
   can install it by running the following in the `Console`:
@@ -755,7 +756,7 @@ To get started,
 <br/>
 
 
-## R Markdown / quarto suggestions
+## R Markdown / Quarto suggestions
 
 - Remember to name your code chunks
 
@@ -770,7 +771,7 @@ To get started,
   Make slides with `revealjs`, pdfs, books, etc.
 
 ::: aside
-These slides were made with quarto and `revealjs`.
+These slides were made with Quarto and `revealjs`.
 :::
 
 
@@ -786,13 +787,13 @@ These slides were made with quarto and `revealjs`.
 
     - [swirl](https://swirlstats.com/): swirl teaches you R programming and data science interactively, at your own pace, and right in the R console
     - [R manuals](https://cran.r-project.org/manuals.html)
-    - [R for Data Science](https://r4ds.had.co.nz) by Hadley Wickham and
-      Garrett Grolemund
-    - [R Cookbook](https://www.amazon.com/gp/product/0596809158/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596809158&linkCode=as2&tag=cooforr09-20) by Paul Teetor
+    - [R for Data Science](https://r4ds.hadley.nz) (2nd edition) by Hadley Wickham,
+      Mine Çetinkaya-Rundel, and Garrett Grolemund
+    - [R Cookbook](https://rc2e.com/) (2nd edition) by JD Long and Paul Teetor
 
 - Next steps
 
     - [Advanced R](https://adv-r.hadley.nz/) by Hadley Wickham
-    - [R Packages](http://r-pkgs.had.co.nz/) by Hadley Wickham
+    - [R Packages](https://r-pkgs.org/) by Hadley Wickham
 
 :::

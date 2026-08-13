@@ -28,7 +28,7 @@ By the end of today's workshop, you will
 
 - collaborate and manage your work via version control with git/GitHub
 
-- setup and run jobs on Duke Compute Cluster (DCC)
+- set up and run jobs on the Duke Compute Cluster (DCC)
 
 # Duke Computing Resources
 
@@ -51,12 +51,12 @@ All of the following can be accomplished at
 <https://idms-web-selfservice.oit.duke.edu/>:
 :::
 
-  - Changing your password
-  
-  - Changing your challenge questions
-  
+  - Change your password
+
+  - Change your challenge questions
+
   - Set up multi-factor authentication (Duo recommended)
-  
+
   - Change email alias(es)
   
   - Add ssh keys and pick a default shell
@@ -71,7 +71,7 @@ With your NetID and password, you can access your email on the web at
 
 - Mail forwarding is possible but not recommended
 
-- There are limitations on the 3rd party email and calendar clients you can use with your Duke email account
+- There are limitations on the third party email and calendar clients you can use with your Duke email account
 
   - See <https://oit.duke.edu/help/articles/kb0028560/>
 
@@ -85,7 +85,7 @@ Duke network connections:
 
 - DukeOpen 
   
-  - "non-secured" network for miscellaneous devices such as printers, gaming consoles, or streaming TV devices that cannot otherwise be connected to the Dukeblue
+  - "non-secured" network for miscellaneous devices such as printers, gaming consoles, or streaming TV devices that cannot otherwise be connected to Dukeblue
 
 - eduroam (education roaming)
 
@@ -94,9 +94,9 @@ Duke network connections:
 
 ## Multi-factor authentication
 
-To access some resources on campus (e.g. mail, vpn, etc.) you will need to periodically undergo MFA when you login.
+To access some resources on campus (e.g. mail, vpn, etc.) you will need to periodically undergo MFA when you log in.
 
-This is relatively easy to setup using Duo or Duke Unlock - see instructions at <https://idms-mfa.oit.duke.edu/mfa/home>
+This is relatively easy to set up using Duo or Duke Unlock - see instructions at <https://idms-mfa.oit.duke.edu/mfa/home>
 
 
 ## Duke VPN
@@ -128,16 +128,16 @@ This is relatively easy to setup using Duo or Duke Unlock - see instructions at 
 :::
 
 ::: {.column width='50%'}
-3. Another dialog box will appear. Choose `-Default-` from the Group dropdown menu
+4. Another dialog box will appear. Choose `-Default-` from the Group dropdown menu
 
 
-4. Enter your Duke NetID and password and click `OK`.
+5. Enter your Duke NetID and password and click `OK`.
    <br/>
    <center>
    <img src="images/cisco_group.png" height=150, width=300>
    </center>
-   
-5. Follow the steps to complete MFA.
+
+6. Follow the steps to complete MFA.
 :::
 
 ::::
@@ -198,15 +198,15 @@ Duke OIT offers virtual software containers and semester-long virtual machines.
   semester.
   
     - Run Windows or Linux VMs
-    - Computing resources are light: 2 processors and 2GB of memory
+    - Computing resources are light: 2 CPU cores, 4 GB of memory, and 50 GB of storage
     - By default each VM will power down at 6:00 am every morning
-      - Can be avoided if you have a reasonable use case
+      - Can be disabled via the "Automatic power downs" option in VCM
 
 ## Research Toolkits
 
 <https://rtoolkits.web.duke.edu/> is a tool provided by Duke Research Computing to access resources for the DCC.
 
-If you log in, everyone should be able to see that you are a member of the "statdept" group.
+Everyone should be able to log in and see that they are a member of the "statdept" group.
 
 **For PhD students** - You can claim the "Doctoral Resources" allocation to get access to the doctoral student allocation on the DCC.
 
@@ -250,15 +250,36 @@ infrastructure and application support.
 - Live service status dashboard available at [status.oit.duke.edu](https://status.oit.duke.edu/) or [@DukeOIT](https://twitter.com/DukeOIT/)
 
 
-## AI @ Duke
+## AI @ Duke {.smaller}
 
-Recently Duke has entered into a partnership with OpenAI to provide access to GPT-4 and other tools. As graduate students you can access these services via:
+Duke provides a number of AI tools and services that are available to you as graduate students:
 
-* <https://chat.ai.duke.edu> - DukeGPT
+* ChatGPT for Education - a secure Duke workspace for OpenAI's ChatGPT, log in at [chatgpt.com](https://chatgpt.com) with your `netid@duke.edu` email. The Standard tier is free for the Duke community; a Premium tier is available pay-as-you-go through a department fund code.
 
-* <https://dashboard.ai.duke.edu> -  MyGPTBuilder & AI Gateway
+* Claude Code & Cowork - coming this fall! Duke has signed an agreement with Anthropic and both tools will be available on a pay-as-you-go basis, more information to come.
 
-There is also access to Microsoft Copilot tools via your Duke Office365 account.
+* [DukeGPT](https://chat.ai.duke.edu) - a Duke-managed chat interface for exploring and comparing a variety of AI models, including open-source models
+
+* [AI Dashboard](https://dashboard.ai.duke.edu) - MyGPT Builder for custom AI assistants & the AI Gateway for API access to Duke-supported models
+
+There is also access to Microsoft Copilot with your NetID and Zoom AI Companion for meeting summaries.
+
+::: {.aside}
+See [AI @ Duke](https://ai.duke.edu) for the full list of available tools and policies.
+:::
+
+
+## Duke AI Suite models
+
+The Duke AI Suite (DukeGPT, MyGPT Builder, and the AI Gateway) provides access to a wide range of models, hosted on-prem at Duke or in the cloud under Duke's data security agreements.
+
+* General models - the GPT-5 family, Llama 3.3 and 4, gpt-oss, and others
+
+* Specialty models - reasoning, coding, transcription, and embedding models
+
+* `duke-current` - an alias that always points to a highly capable current model, useful for applications built on the AI Gateway
+
+The available models change regularly, see the [Duke AI Suite Models Guide](https://oit.duke.edu/help/articles/kb0038832/) for the current list and details on each model.
 
 
 # DSS Computing Resources
@@ -279,7 +300,7 @@ To access Posit Workbench:
 3. Log-in with your NetID and password.
 
 
-*Note* - this is a small cluster of 3 machines, it is intended for teaching and light workloads. If you need more resources, you should use the DCC directly.
+*Note* - this is a small cluster of 3 machines intended for teaching and light workloads. If you need more resources, you should use the DCC directly.
 
 
 ## Getting help with DSS resources
