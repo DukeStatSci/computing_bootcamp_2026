@@ -80,7 +80,7 @@ Anil Potti was a rising star cancer researcher here at Duke in the School of Med
 
 ::: {.columns}
 ::: {.column .small width="50%"}
-Shu, Mazar, Gino, Ariely, & Bazerman (2012), "Signing at the beginning makes ethics salient ..." PNAS - was an influential paper that claimed to have found that signing a declaration of honesty at the beginning of a survey reduced dishonest self-reports. It involved multiple independent studies and was widely cited.
+Shu, Mazar, Gino, Ariely, & Bazerman (2012), "Signing at the beginning makes ethics salient ..." (PNAS) was an influential paper that claimed to have found that signing a declaration of honesty at the beginning of a survey reduced dishonest self-reports. It involved multiple independent studies and was widely cited.
 
 The paper was retracted in 2021 due to concerns about data fabrication and manipulation in one of the studies.
 
@@ -120,7 +120,7 @@ Subsequently, additional issues were discovered in a different study by a differ
 - Does the code actually do what you think it does?
 <br><br>
 - In addition to what was done, is it clear *why* it was done? (e.g., how
-were parameter chosen?)
+were parameters chosen?)
 <br><br>
 - Can the code be used for other data, especially future updates to the
   current data?
@@ -167,7 +167,7 @@ informal methods that reinforce each other.
 
 - These ideas have been around for years!
 
-- Tools for putting them to practice have also been around.
+- Tools for putting them into practice have also been around.
 
 - They have never been as accessible as they are now.
 
@@ -251,7 +251,7 @@ If you are having trouble accessing Posit Workbench see the next slide.
 
 ::: aside
 If off campus, use the VPN to create a secure connection from your computer to Duke. <br/>
-If you are on campus, be sure you are connected to the DukeBlue network.
+If you are on campus, be sure you are connected to the Dukeblue network.
 :::
 
 
@@ -357,7 +357,7 @@ git is already installed on the server(s). In the terminal tab you can verify th
 
 <br/>
 
-```{bash eval=FALSE}
+``` bash
 [cr173@hypatia ~]$ which git
 ```
 
@@ -413,7 +413,8 @@ The following will tell git who you are, and other common configuration tasks.
 usethis::use_git_config(
   user.name = "Colin Rundel",
   user.email = "rundel@gmail.com",
-  push.default = "simple"
+  init.defaultBranch = "main",
+  pull.rebase = "false"
 )
 ```
 
@@ -424,7 +425,8 @@ This can also be done via the terminal with,
 ```bash
 git config --global user.name "Colin Rundel"
 git config --global user.email "rundel@gmail.com"
-git config --global push.default simple
+git config --global init.defaultBranch main
+git config --global pull.rebase false
 ```
 
 
@@ -539,7 +541,7 @@ You now should have all the files in the repository in a directory on the server
 
 We will now make sure that everything is working correctly by making changes to the `README.md` file in the repository.
 
-- Make a small change to `README.md` (i.e. add your name) and save the file.
+- Make a small change to `README.md` (e.g. add your name) and save the file.
 
 - Stage & commit that change using Positron's git GUI
 
@@ -785,7 +787,7 @@ To get started,
 
 - Remember to name your code chunks
 
-- Familiarize yourself with chunk options (https://yihui.org/knitr/options/)
+- Familiarize yourself with chunk options (<https://yihui.org/knitr/options/>)
     - Use global chunk options to reduce duplication
     - Using `#|` syntax enables tab completion for chunk options
 

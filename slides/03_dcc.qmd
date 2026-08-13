@@ -17,19 +17,23 @@ execute:
 ## What is the DCC?
 
 > The Duke Compute Cluster is a general purpose high performance/high-throughput installation, and it is fitted with software used for a broad array of scientific projects. With a few notable exceptions, applications on the cluster are generally Free and Open Source Software.
->
-> Quick facts:
->
-> * 1360 nodes which combined have more than 45,000 vCPUs, 980 GPUs and 270TB of RAM
-> 
-> * Interconnects are 10 Gbps or 40 Gbps
->
-> * Utilizes a 7 Petabyte Isilon file system
->
-> * Runs Alma 9 and SLURM is the job scheduler
+
+Quick facts:
+
+* 1360 nodes which combined have more than 45,000 vCPUs, 1,000 GPUs and 270TB of RAM
+
+* Interconnects are 10 Gbps or 40 Gbps
+
+* Utilizes a 7 Petabyte Isilon file system
+
+* Runs Alma 9 and SLURM is the job scheduler
+
+::: {.aside}
+*Source*: [DCC Overview](https://oit-rc.pages.oit.duke.edu/rcsupportdocs/about/) and [DCC Architecture](https://oit-rc.pages.oit.duke.edu/rcsupportdocs/dcc/architecture/)
+:::
 
 
-# Acceptable Use & Data Security
+# Acceptable Use<br/>& Data Security
 
 ## Cluster Appropriate Use
 
@@ -49,7 +53,7 @@ Use of the cluster for any of the following is prohibited:
 See the [DCC Overview](https://oit-rc.pages.oit.duke.edu/rcsupportdocs/about/) for the full set of cluster policies.
 :::
 
-## Sharing resources responsibly {.smaller}
+## Sharing resources responsibly
 
 The DCC is a shared environment and all users are expected to follow some basic best practices:
 
@@ -61,8 +65,9 @@ The DCC is a shared environment and all users are expected to follow some basic 
 
 * Shared storage is for data under active computation, not long term storage. Clean up and remove your data when your computation concludes.
 
-## AI tools on the DCC {.smaller}
+## AI tools on the DCC
 
+::: {.medium}
 Research Computing now has a policy on AI use on the cluster, some highlights:
 
 * AI use must be consistent with Duke's research, instructional, and administrative purposes, must respect data classification requirements, and must not interfere with other users or the security of the system.
@@ -74,8 +79,10 @@ Research Computing now has a policy on AI use on the cluster, some highlights:
 * OpenClaw is not permitted anywhere on the DCC.
 
 * You are responsible for all activity from your account. Only use AI tools in ways you can supervise, explain, and defend.
+:::
 
-## Data Security & Privacy {.smaller}
+
+## Data Security & Privacy
 
 * Users are responsible for any data they introduce to the cluster and must follow all applicable Duke (including IRB), school, and departmental policies on data management and data use.
 
@@ -90,7 +97,7 @@ Research Computing now has a policy on AI use on the cluster, some highlights:
 
 # Duke Data Classification
 
-## Data Classification Standard {.smaller}
+## Data Classification Standard
 
 Duke classifies all university data into three levels based on risk, and that classification determines where data may be stored and processed.
 
@@ -100,13 +107,13 @@ Duke classifies all university data into three levels based on risk, and that cl
 
 * **Public** - all other data, which can be accessible to the general public.
 
-If data has not been classified it defaults to Restricted, so when in doubt treat data as Restricted until its data steward tells you otherwise.
+If data has not been classified, it defaults to Restricted, so when in doubt treat data as Restricted until its data steward tells you otherwise.
 
 ::: {.aside}
 See the [Data Classification Standard](https://security.duke.edu/policies-procedures-and-standards/data-security/data-classification-standard/) for more details.
 :::
 
-## Classification examples {.smaller}
+## Classification examples
 
 | Level | Examples |
 |-------|----------|
@@ -114,7 +121,7 @@ See the [Data Classification Standard](https://security.duke.edu/policies-proced
 | Restricted | Unpublished research data, non-public financial records, data covered by NDAs, library transaction records |
 | Public | Published research, university websites, campus maps, directory listings |
 
-## Classified data & the DCC {.smaller}
+## Classified data & the DCC
 
 * The DCC's security and compliance provisions are sufficient for Public and Restricted data only.
 
@@ -142,17 +149,21 @@ See the [Data Classification Standard](https://security.duke.edu/policies-proced
 
 ## Storage usage
 
+::: {.medium}
+
 * `/home` - personal scripts and configuration files, environment setup information
 
 * `/group` - software installations, lab specific scripts, moderately sized data sets or intermediate results that are needed for longer than 75 days.
 
-* `/work` - large data sets under analysis, intermediate results. **Files older than 75 days are automatically purged!**
+* `/work` - large data sets under analysis, intermediate results. Files older than 75 days are automatically purged!
 
-* `/cwork/` - experimental version of /work for large data sets under analysis, intermediate data, and preliminary results. **Files older than 75 days are automatically purged!**
+* `/cwork/` - experimental version of /work for large data sets under analysis, intermediate data, and preliminary results. Files older than 75 days are automatically purged!
 
 * `/datacommons` - long term storage for source data and results data
 
 * `/scratch` - node specific high speed storage, data must be deleted when job is complete. Sizes vary by node, use with caution.
+
+:::
 
 ::: {.aside}
 For `/work/` and `/cwork/` you may need to create your own folder for your use with `mkdir <netid>`.
@@ -165,14 +176,14 @@ All access to the DCC compute nodes is managed through the SLURM job scheduler.
 
 Traditionally, users would log in to the cluster via SSH and then submit jobs to the scheduler. 
 
-This is still the preferred approach for large scale jobs but is beyond the scope of today's workshop. If this is of interest to you I strongly recommend [RC training](https://oit-rc.pages.oit.duke.edu/rcsupportdocs/help/training/).
+This is still the preferred approach for large scale jobs but is beyond the scope of today's workshop. If this is of interest to you, I strongly recommend [RC training](https://oit-rc.pages.oit.duke.edu/rcsupportdocs/help/training/).
 
 
 ## Open OnDemand
 
 For interactive use the current recommended approach is to use the OnDemand web-based interface.
 
-* Open OnDemand gives access to tools like Jupyter Notebooks, RStudio, and VS Code on the DCC through your browser
+* Open OnDemand gives access to tools like Jupyter Lab, RStudio, Positron, and VS Code on the DCC through your browser
 
 * Currently there are two flavors of OnDemand available:
   * RC OnDemand - <https://dcc-ondemand-01.oit.duke.edu/>
@@ -185,13 +196,13 @@ For interactive use the current recommended approach is to use the OnDemand web-
 
 ::: {.r-stack} 
 
-![](images/ondemand1.png){width="85%" fig-align=center .fragment .fade-in-then-out}
+![](images/ondemand1.png){width="80%" fig-align=center}
 
-![](images/ondemand2.png){width="85%" fig-align=center .fragment .fade-in-then-out}
+![](images/ondemand2.png){width="85%" fig-align=center .fragment}
 
-![](images/ondemand4.png){width="85%" fig-align=center .fragment .fade-in-then-out}
+![](images/ondemand4.png){width="85%" fig-align=center .fragment}
 
-![](images/ondemand5.png){width="85%" fig-align=center .fragment .fade-in-then-out}
+![](images/ondemand5.png){width="85%" fig-align=center .fragment}
 
 ![](images/ondemand6.png){width="85%" fig-align=center .fragment}
 
@@ -205,19 +216,21 @@ OnDemand generally will let you know which partitions you have access to, but th
 
 . . .
 
-*General use partitions*:
+General use partitions:
 
+::: {.medium}
 * **interactive** for short interactive sessions, default resources are low.
 * **common** for jobs that will run on the DCC core nodes
 * **gpu-common** for jobs that will run on DCC GPU nodes
 * **scavenger** for jobs that will run on lab-owned nodes in “low priority” (kill and requeue preemption).
 * **scavenger-gpu** for GPU jobs that will run on lab-owned nodes in “low priority” (kill and requeue preemption)
+:::
 
 ## Limitations
 
 Interactive partition:
 
-* 10 CPUs, 64 GB memory, sessions up to 1 day
+* 10 CPUs, 64 GB memory, runtime of up to 1 day
 
 All other partitions:
 
@@ -238,7 +251,7 @@ After account and partition, the other important job options are:
 
 ## App Container
 
-This is another advanced option - we have pre-built containers for all of the tools provided that have a preconfigured environment with Python, R, and Julia installed (including common packages).
+This is another advanced option - for all of the tools provided we have pre-built containers with a preconfigured environment that includes Python, R, and Julia (along with common packages).
 
 The hope is that these will meet most of your needs, but you can also create your own containers if something more specialized is needed.
 
