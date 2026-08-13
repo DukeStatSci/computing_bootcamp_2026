@@ -1,9 +1,9 @@
 ---
-title: "Responsible research<br/>and reproducibility"
-subtitle: "2025 DSS Bootcamp"
+title: "Reproducibility, Version Control,<br/>and Literate Programming"
+subtitle: "2026 DSS Bootcamp"
 author: "Colin Rundel"
 institute: ""
-format: 
+format:
   revealjs:
     self-contained: true
     slide-number: true
@@ -17,16 +17,16 @@ execute:
 
 ## Bad spreadsheet merge kills depression paper, quick fix resurrects it
 
-- The authors informed the journal that the merge of lab results and other 
-survey data used in the paper resulted in an error regarding the 
-identification codes. Results of the analyses were based on the data set 
-in which this error occurred. Further analyses established the results 
+- The authors informed the journal that the merge of lab results and other
+survey data used in the paper resulted in an error regarding the
+identification codes. Results of the analyses were based on the data set
+in which this error occurred. Further analyses established the results
 reported in this manuscript and interpretation of the data are not correct.
 
-- **Original conclusion:** Lower levels of CSF IL-6 were associated with 
+- **Original conclusion:** Lower levels of CSF IL-6 were associated with
 current depression and with future depression [...].
 
-- **Revised conclusion:** Higher levels of CSF IL-6 and IL-8 were 
+- **Revised conclusion:** Higher levels of CSF IL-6 and IL-8 were
 associated with current depression [...].
 
 ::: aside
@@ -36,15 +36,15 @@ Source: <http://retractionwatch.com/2014/07/01/bad-spreadsheet-merge-kills-depre
 
 ## Seizure study retracted after authors realize data got "terribly mixed"
 
-- From the authors of **Low Dose Lidocaine for Refractory Seizures in 
+- From the authors of **Low Dose Lidocaine for Refractory Seizures in
   Preterm Neonates**:
 
-- *"The article has been retracted at the request of the authors. After 
-  carefully re-examining the data presented in the article, they identified 
-  that data of two different hospitals got terribly mixed. The published 
-  results cannot be reproduced in accordance with scientific and clinical 
+- *"The article has been retracted at the request of the authors. After
+  carefully re-examining the data presented in the article, they identified
+  that data of two different hospitals got terribly mixed. The published
+  results cannot be reproduced in accordance with scientific and clinical
   correctness."*
-  
+
 
 ::: aside
 Source: [retractionwatch.com/2013/02/01/seizure-study-retracted-after-authors-realize-data-got-terribly-mixed/](http://retractionwatch.com/2013/02/01/seizure-study-retracted-after-authors-realize-data-got-terribly-mixed/)
@@ -54,13 +54,13 @@ Source: [retractionwatch.com/2013/02/01/seizure-study-retracted-after-authors-re
 ## Heart pulls sodium meta-analysis over duplicated, and now missing, data
 
 
-The journal Heart has retracted a 2012 meta-analysis after learning that 
+The journal Heart has retracted a 2012 meta-analysis after learning that
   two of the six studies included in the review contained duplicated data.
   Those studies, it so happens, were conducted by one of the co-authors.
 
-> The Committee considered that without sight of 
+> The Committee considered that without sight of
   the raw data on which the two papers containing the duplicate data were based,
-  their reliability could not be substantiated. Following inquiries, it turns 
+  their reliability could not be substantiated. Following inquiries, it turns
   out that the raw data are no longer available having been lost as a result of
   computer failure.
 
@@ -89,7 +89,7 @@ Anil Potti was a rising star cancer researcher here at Duke in the School of Med
 
 ::: {.columns}
 ::: {.column width="50%"}
-Shu, Mazar, Gino, Ariely, & Bazerman (2012), "Signing at the beginning makes ethics salient…." PNAS - was a very influential paper that claimed to have found that signing a declaration of honesty at the beginning of a survey reduced dishonest self-reports. It involved multiple independent studies and was widely cited in the literature. 
+Shu, Mazar, Gino, Ariely, & Bazerman (2012), "Signing at the beginning makes ethics salient…." PNAS - was a very influential paper that claimed to have found that signing a declaration of honesty at the beginning of a survey reduced dishonest self-reports. It involved multiple independent studies and was widely cited in the literature.
 
 The paper was retracted in 2021 due to concerns about data fabrication and manipulation in one of the studies.
 
@@ -126,7 +126,7 @@ Subsequently, additional issues were discovered in a different study by a differ
 <br><br>
 - Does the code actually do what you think it does?
 <br><br>
-- In addition to what was done, is it clear *why* it was done? (e.g., how 
+- In addition to what was done, is it clear *why* it was done? (e.g., how
 were parameter settings chosen?)
 <br><br>
 - Can the code be used for other data, especially future updates to the
@@ -148,7 +148,7 @@ Patil, P., Peng, R.D. & Leek, J.T. A visual tool for defining reproducibility an
 
 We need an environment where:
 
-- data, analysis, and results are tightly connected, or better yet, 
+- data, analysis, and results are tightly connected, or better yet,
 inseparable,
 
 - reproducibility is built in,
@@ -160,14 +160,14 @@ inseparable,
 
 ## Donald Knuth "Literate Programming" (1983)
 
-"Let us change our traditional attitude to the construction of programs: 
-Instead of imagining that our main task is to instruct a *computer* what 
-to do, let us concentrate rather on explaining to *human beings* what we 
+"Let us change our traditional attitude to the construction of programs:
+Instead of imagining that our main task is to instruct a *computer* what
+to do, let us concentrate rather on explaining to *human beings* what we
 want a computer to do."
 
-"The practitioner of literate programming [...] strives for a program that 
-is comprehensible because its concepts have been introduced in an order 
-that is best for human understanding, using a mixture of formal and 
+"The practitioner of literate programming [...] strives for a program that
+is comprehensible because its concepts have been introduced in an order
+that is best for human understanding, using a mixture of formal and
 informal methods that reinforce each other."
 
 . . .
@@ -222,3 +222,577 @@ Git / GitHub
 ::::
 
 <br/>
+
+# Getting set up
+
+## GitHub account
+
+::: {style="font-size: 80%;"}
+- Create a GitHub account (unless you already have one) on [https://github.com/](https://github.com/)
+
+- One day you might want to show off your work, so choose a username you will be ok with disclosing to a future employer.
+
+Some suggestions:
+
+  - Incorporate your actual name.
+
+  - Shorter is better than longer.
+
+  - Be as unique as possible in as few characters as possible. In some settings GitHub auto-completes or suggests usernames.
+
+  - Make it timeless. Don't highlight your current university, employer, or place of residence.
+
+  - Avoid words laden with special meaning in programming.
+:::
+
+## Accessing RStudio Workbench
+
+To get started as quickly as possible, the preferred method is to use DSS RStudio server(s).
+
+To access RStudio Workbench:
+
+1.  Navigate to <https://rstudio.stat.duke.edu>
+2.  Log-in with your Duke NetID and password.
+
+If you are having trouble accessing RStudio Workbench see the next slide.
+
+::: aside
+If off campus, use the VPN to create a secure connection from your computer to Duke. <br/>
+If you are on campus, be sure you are connected to the DukeBlue network.
+:::
+
+
+## DSS RStudio alternatives
+
+If you cannot access RStudio via the DSS servers:
+
+- Make sure you are not using a custom DNS server
+
+    - e.g. `1.1.1.1` or `8.8.8.8`
+
+- Use a Docker container from Duke OIT
+
+    1.  Go to <https://cmgr.oit.duke.edu/> and login
+    2.  Select `Reserve a Container` and find `RStudio (statistics application with R Markdown and knitr support)`
+    3.  Click the link under my reservations to create your environment
+
+- Install R and RStudio locally on your computer
+
+    - Download R on your computer [here](http://archive.linux.duke.edu/cran/)
+    - Download RStudio [here](https://www.rstudio.com/products/rstudio/download/#download)
+
+
+## Bootcamp materials
+
+- Everything from this computing bootcamp is available in the GitHub repository: [https://github.com/dukestatsci/computing_bootcamp_2026](https://github.com/dukestatsci/computing_bootcamp_2026)
+
+- You'll learn how to get this on your computer shortly.
+
+# git and GitHub
+
+## Why version control?
+
+::: columns
+::: {.column width="50%"}
+- Simple formal system for tracking changes to a project over time
+
+- Time machine for your projects
+
+    - Track blame and/or praise
+    - Remove the fear of breaking things
+
+- Learning curve can be a bit steep, but when you need it you *REALLY* need it
+:::
+
+::: {.column width="50%"}
+![](images/local-vc-system.png)
+:::
+:::
+
+## Why git?
+
+:::: {.columns}
+::: {.column width="50%"}
+- Distributed
+
+    - Work online or offline
+    - Collaborate with large groups
+
+- Popular and Successful
+
+    - Active development
+    - Shiny new tools and ecosystems
+    - Fast
+
+- Tracks any type of file
+
+- Branching
+
+    - Smarter merges
+:::
+
+::: {.column width="50%"}
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("images/distributed-vc-system.png")
+```
+:::
+::::
+
+
+## Verifying git exists
+
+git is already set-up on the DSS server(s). In the terminal tab you can verify this by running:
+
+``` bash
+[cr173@hypatia ~]$ git --version
+```
+```
+## git version 2.20.1
+```
+
+<br/>
+
+```{bash eval=FALSE}
+[cr173@hypatia ~]$ which git
+```
+
+```
+## /usr/bin/git
+```
+
+::: aside
+To install git on your own computer follow the directions in [Happy Git and GitHub for the useR](https://happygitwithr.com/install-git.html).
+:::
+
+
+## Git sitrep
+
+Within R we can also use the `usethis` package to get a helpful summary of the current git configuration,
+
+```{r}
+#| eval: false
+usethis::git_sitrep()
+```
+
+```
+## Git config (global)
+## ● Name: <unset>
+## ● Email: <unset>
+## ● Vaccinated: FALSE
+## ℹ See `?git_vaccinate` to learn more
+## ℹ Defaulting to https Git protocol
+## ● Default Git protocol: 'https'
+## GitHub
+## ● Default GitHub host: 'https://github.com'
+## ● Personal access token for 'https://github.com': <unset>
+## x Call `gh_token_help()` for help configuring a token
+## Git repo for current project
+## ℹ No active usethis project
+```
+
+# git and GitHub live demo
+
+## Configure git
+
+The following will tell git who you are, and other common configuration tasks.
+
+``` r
+usethis::use_git_config(
+  user.name = "Colin Rundel",
+  user.email = "rundel@gmail.com",
+  push.default = "simple"
+)
+```
+
+You will need to do this configuration once on each machine in which you use git (e.g. the server and your laptop).
+
+This can also be done via the terminal with,
+
+```bash
+git config --global user.name "Colin Rundel"
+git config --global user.email "rundel@gmail.com"
+git config --global push.default simple
+```
+
+
+::: aside
+All of these values will be saved in the `.gitconfig` file in your home directory
+:::
+
+## Configure git verification
+
+To verify you configured git correctly, run
+
+```r
+usethis::git_sitrep()
+```
+```
+## Git config (global)
+## ● Name: 'Colin Rundel'
+## ● Email: 'rundel@gmail.com'
+## ● Vaccinated: FALSE
+## ℹ See `?git_vaccinate` to learn more
+## ● Default Git protocol: 'https'
+## GitHub
+## ● Default GitHub host: 'https://github.com'
+## ● Personal access token for 'https://github.com': <unset>
+## x Call `gh_token_help()` for help configuring a token
+## Git repo for current project
+## ℹ No active usethis project
+```
+
+You should see output similar to above with your details.
+
+
+## Configure SSH and GitHub (authentication)
+
+We will be authenticating with GitHub using SSH via public / private keys. We can create a new key pair (if necessary) by running the following in RStudio's *console*:
+
+```{r eval=FALSE}
+credentials::ssh_setup_github()
+```
+
+. . .
+
+```
+## No SSH key found. Generate one now?
+##
+## 1: Yes
+## 2: No
+##
+## Selection: 1
+## Generating new RSA keyspair at: /home/guest/.ssh/id_rsa
+## Your public key:
+##
+##  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/wH7pT3UXdOMJSX2wMaPVTyGnYkS8OPmcfjct6h8Q+44/9UG3sOibjjUCxIxVeCWAoYFB0rDI3/Ljf2EWozLlpeGzAe7xsg6A+MHtUObZnfzXSB/NnOhZymD2u8Nh+py07aojVdKAPBkRH3nHA+rljidc3gXZkqseetYEI1N79OQUshp2P+Qm6Vab4I5OCnfAwLFkR7Sw7J9hvZN1qUmM0DB0WTWSlNmPSMsASMe/6Nz30IRoBh35Z7tgF79rlIW385giCkEeD20Le9EOueGoTWarJWylE1RWnUyig2mZ9JK/rYTw4KBXacPhBwn+MgGC+r8xY5IEX78xkeXW9q2z #<<
+##
+## Please copy the line above to GitHub: https://github.com/settings/ssh/new
+## Would you like to open a browser now?
+##
+## 1: Yes
+## 2: No
+##
+## Selection: 1
+```
+
+
+## Getting started today
+
+In order to get started, you need to obtain today's files from GitHub. The steps below will give you access.
+
+1.  Log in to GitHub
+
+2.  Navigate to <https://github.com/dukestatsci/computing_bootcamp_2026>
+
+3.  Fork the repository
+
+4.  Copy the link under `Clone or Download` to clone with *SSH*.
+
+5.  In RStudio go to `File > New Project > Version Control > Git`
+
+6.  Paste the URL, that you copied in step 4, in the box under `Repository URL`
+
+You now should have all the files in the repository in a directory on the server or your own computer.
+
+
+## Introduction to git
+
+![](images/git_6_commands.jpeg){fig-align="center"}
+
+
+## git Verbs (commands)
+
+- `status` - returns details about the current status of your git repository
+
+- `add` / `rm` - stage (or unstage) a local file with changes so that the changes will be saved when you commit.
+
+- `restore` - revert local changes that have not yet been committed
+
+- `commit` - save staged local changes
+
+- `push` - send local committed changes to a remote git instance
+
+- `pull` - collect committed changes from a remote git instance
+
+
+## Activity
+
+We will now make sure that everything is working correctly by making changes to the `README.md` file in the repository.
+
+- Make a small change to `README.md` (i.e. add your name) and save the file.
+
+- Stage & commit that change using RStudio's git GUI
+
+- Push the changes to GitHub
+
+- Check that the changes are reflected on GitHub
+
+
+## Version control best practices
+
+- Commit early, often, and with complete code.
+
+- Write clear and concise commit messages.
+
+- Test code before you commit.
+
+- Use branches.
+
+- Communicate with your team.
+
+## git and GitHub resources
+
+- git's [Pro Git](https://git-scm.com/book/en/v2) book, Chapters [Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) and [Git Basics](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) will be most useful if you are new to git and GitHub
+
+- [Git cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet) by Atlassian
+
+- GitHub's interactive [tutorial](https://try.github.io/)
+
+- [Free online course](https://www.udacity.com/course/version-control-with-git--ud123) from Udacity
+
+- [Happy Git with R](http://happygitwithr.com/) by Jenny Bryan
+
+# Literate programming with R Markdown and Quarto
+
+## What is markdown?
+
+- Markdown is a lightweight markup language for creating HTML (and other formatted)
+documents.
+
+- Markup languages are designed to produce documents from human readable
+text (and annotations).
+
+- Some of you may be familiar with LaTeX. This is another (less human
+friendly) markup language for creating pdf documents.
+
+- Why markdown is great:
+
+  - Easy to learn and use.
+  - Focus on **content**, rather than **coding** and debugging **errors**.
+  - Once you have the basics down, you can get fancy via HTML, JavaScript,
+    and CSS.
+  - Used by R Markdown, Jupyter Notebooks, and Quarto
+
+## R Markdown / Quarto - Input {.smaller}
+
+:::: {.columns}
+::: {.column width='50%'}
+R Markdown:
+````markdown
+---
+title: "Untitled"
+output: html_document
+date: "2023-08-22"
+---
+
+```{{r setup, include=FALSE}}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{{r cars}}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{{r pressure, echo=FALSE}}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+````
+:::
+
+::: {.column width='50%'}
+Quarto:
+````markdown
+---
+title: "Untitled"
+format: html
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{{r}}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{{r}}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+````
+:::
+::::
+
+
+
+
+
+
+## R Markdown / Quarto - Output
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+  **Something simple**
+  <br/><br/>
+  ![](images/simple-rmd.png)
+:::
+
+::: {.column width='50%'}
+**Something fancy**
+  <br/><br/>
+  ![](images/fancy-rmd.png)
+:::
+
+::::
+
+
+
+## R Markdown resources
+
+- In RStudio, go to `Help > Cheatsheets` and select
+    - R Markdown Cheat Sheet
+    - R Markdown Reference Guide
+
+- Check out the official R Markdown book:
+  [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+  by Yihui Xie, J. J. Allaire, and Garrett Grolemund
+
+- Check out
+  [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/) by Yihui Xie.
+
+- Take a look at [RPubs](http://rpubs.com/) web published R Markdown documents.
+
+
+## Quarto resources
+
+- Much of the syntax is shared with R Markdown - so previous resources are a good place to start
+
+- [quarto.org](https://quarto.org/)
+
+- Tom Mock's [Intro to Quarto webinar](https://jthomasmock.github.io/quarto-2hr-webinar/)
+
+- RStudioConf 2023 workshops
+
+  - [Getting Started with Quarto](https://rstudio-conf-2023.github.io/get-started-quarto/)
+
+  - [From R Markdown to Quarto](https://rstudio-conf-2023.github.io/rmd-to-quarto/)
+
+
+# Quarto / RMarkdown demo
+
+
+## R packages
+
+- Packages are the fundamental units of reproducible R code. They include
+  reusable R functions, the documentation that describes how to use them,
+  and sample data.
+
+- In the following exercises we'll use the `tidyverse` package.
+
+  - The tidyverse is an opinionated collection of R packages designed for
+    data science. All packages share an underlying design philosophy, grammar,
+    and data structures.
+  - The core tidyverse packages consists of `ggplot2`, `tibble`, `tidyr`,
+    `readr`, `purrr`, `dplyr`, `stringr`, and `forcats` packages.
+
+- This package is already installed for you on the DSS servers. If needed, you
+  can install it by running the following in the `Console`:
+  ```{r eval=FALSE}
+  install.packages("tidyverse")
+  ```
+
+
+
+## A note on environments
+
+- Your R Markdown / Quarto document and your Console do not share their global environments.
+
+  - This is different than the computational model of Jupyter Notebooks!
+
+- This is good for reproducibility, but can sometimes result in frustrating
+  errors.
+
+- This also means any packages or data needed for your analysis need to be loaded in
+  your R Markdown document as well.
+
+
+
+## Unvotes data analysis
+
+To get started,
+
+- open `examples/unvotes.qmd`,
+
+- try Rendering the entire document and examine the results.
+
+- try changing one or more of the selected countries, re-render the document and observe any changes.
+
+- commit and push your changes to GitHub
+
+<br/>
+
+
+## R Markdown / quarto suggestions
+
+- Remember to name your code chunks
+
+- Familiarize yourself with chunk options (https://yihui.org/knitr/options/)
+    - Use global chunk options to reduce duplication
+    - Using `#|` syntax enables tab completion for chunk options
+
+- Load packages at the start of a document, generally the chunk after your
+  setup chunk
+
+- Familiarize yourself with various output formats:
+  Make slides with `revealjs`, pdfs, books, etc.
+
+::: aside
+These slides were made with quarto and `revealjs`.
+:::
+
+
+## R programming resources
+
+::: {style="font-size: 80%;"}
+- Style
+
+    - [Tidyverse style guide](http://style.tidyverse.org/)
+    - [Google's R style guide](https://google.github.io/styleguide/Rguide.html)
+
+- Beginner
+
+    - [swirl](https://swirlstats.com/): swirl teaches you R programming and data science interactively, at your own pace, and right in the R console
+    - [R manuals](https://cran.r-project.org/manuals.html)
+    - [R for Data Science](https://r4ds.had.co.nz) by Hadley Wickham and
+      Garrett Grolemund
+    - [R Cookbook](https://www.amazon.com/gp/product/0596809158/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596809158&linkCode=as2&tag=cooforr09-20) by Paul Teetor
+
+- Next steps
+
+    - [Advanced R](https://adv-r.hadley.nz/) by Hadley Wickham
+    - [R Packages](http://r-pkgs.had.co.nz/) by Hadley Wickham
+
+:::

@@ -1,6 +1,6 @@
 ---
 title: "Duke Compute Cluster (DCC)"
-subtitle: "2025 DSS Bootcamp"
+subtitle: "2026 DSS Bootcamp"
 author: "Colin Rundel"
 format: 
   revealjs:
@@ -29,40 +29,105 @@ execute:
 > * Runs Alma 9 and SLURM is the job scheduler
 
 
+# Acceptable Use & Data Security
+
 ## Cluster Appropriate Use
 
->Users of the cluster agree to only run jobs that relate to the research mission of Duke University. Use of the cluster for the following activities is prohibited:
->
-> * Financial gain
-> 
-> * Commercial or business use
-> 
-> * Unauthorized use or storage of copyright-protected or proprietary resources
-> 
-> * Unauthorized mining of data on or off campus (including many web scraping techniques)
+The DCC exists to support the research mission of Duke University, and users agree to only run jobs related to that mission.
 
-## Data Security
+Use of the cluster for any of the following is prohibited:
 
-> Users of the cluster are responsible for the data they introduce to the cluster and must follow all applicable Duke (including IRB), school, and departmental policies on data management and data use. 
+* Financial gain
 
-> Security and compliance provisions on the cluster are sufficient to meet the Duke data classification standard for public or restricted data.  
+* Commercial or business use
 
-> Use of sensitive data (e.g. legally protected data such as PHI or FERPA) or data bound by certain restrictions in data use agreements is not allowed. 
+* Unauthorized use or storage of copyright-protected or proprietary resources
+
+* Unauthorized mining of data on or off campus (including many web scraping techniques)
+
+::: {.aside}
+See the [DCC Overview](https://oit-rc.pages.oit.duke.edu/rcsupportdocs/about/) for the full set of cluster policies.
+:::
+
+## Sharing resources responsibly {.smaller}
+
+The DCC is a shared environment and all users are expected to follow some basic best practices:
+
+* All computational work must be submitted through the SLURM scheduler. Running jobs on the login nodes is considered an abuse of the system.
+
+* Use common partition resources judiciously, only request the CPUs, memory, and time your job actually needs.
+
+* Long running jobs are discouraged on the common and scavenger partitions. Save intermediate results (checkpoint) so an interrupted job does not mean starting over.
+
+* Shared storage is for data under active computation, not long term storage. Clean up and remove your data when your computation concludes.
+
+## AI tools on the DCC {.smaller}
+
+Research Computing now has a policy on AI use on the cluster, some highlights:
+
+* AI use must be consistent with Duke's research, instructional, and administrative purposes, must respect data classification requirements, and must not interfere with other users or the security of the system.
+
+* AI-assisted development and research workflows are appropriate when run transparently, within your resource allocations, and with normal user oversight.
+
+* Do not give agentic AI tools broad, unattended control over files, shell commands, network access, credentials, or job submission. Unsafe permission bypass modes (e.g. `--dangerously-skip-permissions`, "YOLO mode", blanket tool approval) are strongly discouraged.
+
+* OpenClaw is not permitted anywhere on the DCC.
+
+* You are responsible for all activity from your account. Only use AI tools in ways you can supervise, explain, and defend.
+
+## Data Security & Privacy {.smaller}
+
+* Users are responsible for any data they introduce to the cluster and must follow all applicable Duke (including IRB), school, and departmental policies on data management and data use.
 
 . . .
 
-> As a shared resource, privacy on the cluster is constrained and users of the cluster must conduct themselves in a manner that respects other researchers’ privacy. Cluster support staff have access to all data on the cluster and may inspect elements of the system from time to time. Metadata on the cluster and utilization by group (and sometimes user) will be made available to all cluster users and Duke stakeholders.
+* As a shared resource, privacy on the cluster is constrained:
+
+  * Cluster support staff have access to all data on the cluster and may inspect elements of the system from time to time.
+
+  * Metadata and utilization by group (and sometimes user) are made available to all cluster users and Duke stakeholders.
 
 
-## Data Classification Standard
+# Duke Data Classification
 
-See [Data Classification Standard](https://security.duke.edu/policies-procedures-and-standards/data-security/data-classification-standard/) for more details:
+## Data Classification Standard {.smaller}
 
-* **Sensitive**	- this is data that Duke is either required by law to protect, or which Duke protects to mitigate institutional risk. (SSNs, CCNs, PHI, etc.)
+Duke classifies all university data into three levels based on risk, and that classification determines where data may be stored and processed.
 
-* **Restricted** - this is data that is not necessarily for public consumption, but also does not fit into the Sensitive category. Duke may have a proprietary obligation to protect Restricted data, but disclosure would not significantly harm the university. (NDA data, financial transaction data, etc.)
+* **Sensitive** - data that Duke is either required by law to protect, or which Duke protects to mitigate institutional risk. Explicit institutional approval is needed to access Sensitive data.
 
-* **Public** -All other data, which can be accessible to the general public. 
+* **Restricted** - data that is not necessarily for public consumption, but also does not fit into the Sensitive category. Disclosure would not significantly harm the university.
+
+* **Public** - all other data, which can be accessible to the general public.
+
+If data has not been classified it defaults to Restricted, so when in doubt treat data as Restricted until its data steward tells you otherwise.
+
+::: {.aside}
+See the [Data Classification Standard](https://security.duke.edu/policies-procedures-and-standards/data-security/data-classification-standard/) for more details.
+:::
+
+## Classification examples {.smaller}
+
+| Level | Examples |
+|-------|----------|
+| Sensitive | Social security numbers, credit card numbers, health records (HIPAA / PHI), student records (FERPA), donor information, research data with contractual or regulatory protections |
+| Restricted | Unpublished research data, non-public financial records, data covered by NDAs, library transaction records |
+| Public | Published research, university websites, campus maps, directory listings |
+
+## Classified data & the DCC {.smaller}
+
+* The DCC's security and compliance provisions are sufficient for Public and Restricted data only.
+
+* Sensitive data (e.g. legally protected data such as PHI or FERPA) and data bound by certain restrictions in data use agreements are not allowed on the cluster.
+
+* Appropriately de-identified or obfuscated data can potentially be used on the cluster, but confirm with your IRB protocol or data use agreement first.
+
+* If your project involves Sensitive data it needs to live in an environment designed for it (e.g. the Protected Research Data Network), talk to your advisor and see [Regulated Research Data Support](https://research.duke.edu/research/data-support-initiatives/regulated-research-data-support/).
+
+* Before putting data on any Duke service, check the [Duke Services and Data Classification](https://security.duke.edu/policies-procedures-and-standards/data-security/duke-services-and-data-classification) chart for what is approved at each level.
+
+
+# Using the DCC
 
 ## Storage on the DCC {.smaller}
 

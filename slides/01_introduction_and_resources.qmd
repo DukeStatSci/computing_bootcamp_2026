@@ -1,6 +1,6 @@
 ---
 title: "Introduction &<br/>Computing Resources"
-subtitle: "2025 DSS Bootcamp"
+subtitle: "2026 DSS Bootcamp"
 author: "Colin Rundel"
 institute: ""
 format: 
@@ -17,7 +17,7 @@ execute:
 Welcome to the Department of Statistical Science (DSS).
 
 Find all slides and source code at  
-[github.com/DukeStatSci/computing_bootcamp_2025](https://github.com/DukeStatSci/computing_bootcamp_2025)
+[github.com/DukeStatSci/computing_bootcamp_2026](https://github.com/DukeStatSci/computing_bootcamp_2026)
 
 By the end of today's workshop, you will
 

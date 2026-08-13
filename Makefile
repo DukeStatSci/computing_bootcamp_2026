@@ -1,4 +1,4 @@
-# Makefile for Duke Statistical Science Computing Bootcamp 2025
+# Makefile for Duke Statistical Science Computing Bootcamp 2026
 
 # Define variables
 SLIDE_DIR = slides
@@ -31,12 +31,10 @@ $(EXAMPLES_DIR)/%.html: $(EXAMPLES_DIR)/%.qmd
 	quarto render "$<"
 
 # Specific slide targets for convenience
-.PHONY: intro repro version literate dcc
+.PHONY: intro repro dcc
 intro: $(SLIDE_DIR)/01_introduction_and_resources.html
-repro: $(SLIDE_DIR)/02_reproducible_research.html  
-version: $(SLIDE_DIR)/03_version_control.html
-literate: $(SLIDE_DIR)/04_literate_programming.html
-dcc: $(SLIDE_DIR)/05_dcc.html
+repro: $(SLIDE_DIR)/02_reproducible_research.html
+dcc: $(SLIDE_DIR)/03_dcc.html
 
 # Specific example targets
 .PHONY: unvotes
@@ -65,9 +63,7 @@ help:
 	@echo "  slides    - Render all slide presentations"  
 	@echo "  examples  - Render all example documents"
 	@echo "  intro     - Render introduction slides"
-	@echo "  repro     - Render reproducible research slides"
-	@echo "  version   - Render version control slides"
-	@echo "  literate  - Render literate programming slides"
+	@echo "  repro     - Render reproducibility, version control & literate programming slides"
 	@echo "  dcc       - Render DCC slides"
 	@echo "  unvotes   - Render UN votes example"
 	@echo "  clean     - Remove generated HTML files"
