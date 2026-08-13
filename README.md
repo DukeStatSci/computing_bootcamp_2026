@@ -10,5 +10,5 @@ Mine Çetinkaya-Rundel, and Colin Rundel.
 | Topic                           | Slides                                                           |
 |---------------------------------|:----------------------------------------------------------------:|
 | Introduction & Resources        | [:desktop_computer:](https://dukestatsci.github.io/computing_bootcamp_2026/slides/01_introduction_and_resources.html) |
-| Reproducibility, Version Control, & Literate Programming | [:desktop_computer:](https://dukestatsci.github.io/computing_bootcamp_2026/slides/02_reproducible_research.html) |
+| Reproducibility, Version Control, & Literate Programming | [:desktop_computer:](https://dukestatsci.github.io/computing_bootcamp_2026/slides/02_reproducible_workflows.html) |
 | Duke Compute Cluster (DCC)               | [:desktop_computer:](https://dukestatsci.github.io/computing_bootcamp_2026/slides/03_dcc.html)            |

@@ -33,7 +33,7 @@ $(EXAMPLES_DIR)/%.html: $(EXAMPLES_DIR)/%.qmd
 # Specific slide targets for convenience
 .PHONY: intro repro dcc
 intro: $(SLIDE_DIR)/01_introduction_and_resources.html
-repro: $(SLIDE_DIR)/02_reproducible_research.html
+repro: $(SLIDE_DIR)/02_reproducible_workflows.html
 dcc: $(SLIDE_DIR)/03_dcc.html
 
 # Specific example targets
