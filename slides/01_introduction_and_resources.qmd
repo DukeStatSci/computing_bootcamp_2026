@@ -74,7 +74,7 @@ With your NetID and password, you can access your email on the web at
 
 - Your Duke email is not permanent; your account expires once you leave Duke.
 
-- Mail forwarding is possible but not recommended
+- Mail forwarding is possible but not recommended - some messages will silently fail to forward (e.g. anything Duke Health related), so you risk missing them entirely
 
 - There are limitations on the third party email and calendar clients you can use with your Duke email account
 
@@ -94,7 +94,11 @@ Duke network connections:
 
 - eduroam (education roaming)
 
+  - Secure network available at participating universities and research institutions worldwide; log in with your `netid@duke.edu` credentials when visiting other campuses or conference venues
+
 - Visitor
+
+  - Unsecured guest network for campus visitors; does not give access to Duke's private network or resources - as a Duke community member you should be using Dukeblue instead
 
 
 ## Multi-factor authentication
@@ -121,10 +125,10 @@ You will need to set up Duo first, but once that is done Duke Unlock (passkey) i
 :::: {.columns}
 
 ::: {.column width='50%'}
-1. Download and install the free Cisco AnyConnect VPN 
+1. Download and install the free Cisco Secure Client (formerly AnyConnect) VPN
    [software](https://software.duke.edu)
 
-2. Launch Cisco AnyConnect on your machine
+2. Launch Cisco Secure Client on your machine
 
 3. Enter `vpn.duke.edu` in the box and click `Connect`.<br/>
    <center>
@@ -183,11 +187,40 @@ You will need to set up Duo first, but once that is done Duke Unlock (passkey) i
     - Mathematica
     - Tableau
     - 1Password
+    - [Overleaf](https://www.overleaf.com/edu/duke)
   :::
   ::::
 
 
 
+
+
+## Storage & backups
+
+- [OneDrive for Business](https://oit.duke.edu/service/onedrive-business/) - 1 TB of cloud storage, included with Duke's Microsoft 365
+
+- [Duke Box](https://oit.duke.edu/what-we-do/applications/duke-box) - 50 GB of cloud storage with file sharing and collaboration features
+
+- [Duke GitLab](https://gitlab.oit.duke.edu) - Duke-hosted git repositories (NetID login), useful for private or Duke-internal code; this bootcamp uses GitHub, covered later today
+
+- See OIT's [Personal Storage](https://oit.duke.edu/what-we-do/services/personal-storage) page for the full set of options
+
+
+## Backing up your work
+
+Hardware fails, laptops get lost, and files get deleted accidentally - it is a matter of when, not if.
+
+A good rule of thumb is the 3-2-1 rule:
+
+- 3 copies of anything you care about (the original plus 2 backups)
+
+- 2 different types of storage (e.g. your laptop and the cloud)
+
+- 1 copy off site (e.g. OneDrive, Duke Box, or GitHub)
+
+In practice: keep code and documents in git repositories pushed to GitHub, sync your data and everything else with OneDrive or Duke Box, and consider Time Machine (Mac) or File History (Windows) with an external drive for whole-machine backups.
+
+A laptop can be replaced, your dissertation cannot.
 
 
 ## Virtual computing
@@ -204,9 +237,9 @@ Duke OIT offers virtual software containers and semester-long virtual machines.
     - `RStudio` - statistics application with R Markdown and knitr support
     - `Jupyter` - interactive data science and scientific computing notebooks
 
-##
+## Virtual computing - VMs
 
-- [Virtual Machine (VM)](https://vcm.duke.edu/) – Your Duke VM is like having a 
+- [Virtual Machine (VM)](https://vcm.duke.edu/) – Your Duke VM is like having a
   second computer that lives at Duke. You can log into and use your VM 
   from your own machine. It allows you to access specialized software without 
   installing it on your own computer, host your own server for development 
@@ -243,7 +276,7 @@ infrastructure and application support.
 - Walk up hours are available at the [Link](https://link.duke.edu/about-link) in 
   [Perkins Library](http://www.google.com/maps?q=William+R.+Perkins+Library,+Durham,+NC&hl=en&sll=36.001827,-78.884911&sspn=0.486055,0.681839&oq=perkins+&hq=William+R.+Perkins+Library,+Durham,+NC&t=m&z=15).
   
-- Live service status dashboard available at [status.oit.duke.edu](https://status.oit.duke.edu/) or [@DukeOIT](https://twitter.com/DukeOIT/)
+- Live service status dashboard available at [status.oit.duke.edu](https://status.oit.duke.edu/) or [@DukeOIT](https://x.com/DukeOIT)
 
 
 ## AI @ Duke
@@ -321,6 +354,8 @@ The DSS servers are a shared resource for the whole department, so please be con
 * Runtimes should generally be less than 1 day, idle sessions are automatically suspended and long running sessions may be terminated. Anything bigger belongs on the DCC.
 
 * Problematic jobs (e.g. runaway CPU or memory usage) will be killed without notice.
+
+* Your home directory is shared across all DSS servers. The department filesystem is backed up, but recovery requires human intervention (email [stat-help@duke.edu](mailto:stat-help@duke.edu)) - keeping your own copies (e.g. GitHub, OneDrive) is still the fastest way to recover.
 
 You can also connect to the individual servers directly via SSH (e.g. `ssh netid@server.stat.duke.edu`), the same usage rules apply:
 
