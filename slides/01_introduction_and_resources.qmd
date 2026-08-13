@@ -143,6 +143,17 @@ This is relatively easy to set up using Duo or Duke Unlock - see instructions at
 ::::
 
 
+## Duke's internal network
+
+* Much of Duke's infrastructure, including most DSS servers, lives on Duke's internal network and uses private IP addresses (`10.*`).
+
+* These addresses are not reachable from the public internet, you must be on campus (Dukeblue) or connected to the VPN to reach them.
+
+* The hostnames for these machines are served by Duke's private DNS and only resolve when your device is using Duke's DNS servers, e.g. `rstudio.stat.duke.edu` is `10.138.17.14`.
+
+* Connecting to Dukeblue or the VPN configures all of this automatically, but a manually configured DNS server (e.g. `1.1.1.1` or `8.8.8.8`) will override it and these hostnames will fail to resolve.
+
+
 
 ## Software Site Licenses
 
@@ -301,6 +312,49 @@ To access Posit Workbench:
 
 
 *Note* - this is a small cluster of 3 machines intended for teaching and light workloads. If you need more resources, you should use the DCC directly.
+
+
+## Logging in to Workbench
+
+::: {.r-stack}
+
+![](images/rstudio_login.png){width="85%" fig-align=center .fragment .fade-in-then-out}
+
+![](images/rstudio_sessions.png){width="85%" fig-align=center .fragment .fade-in-then-out}
+
+![](images/rstudio_new_session.png){width="85%" fig-align=center .fragment}
+
+:::
+
+
+## Using the DSS servers {.smaller}
+
+The DSS servers are a shared resource for the whole department, so please be considerate in your usage:
+
+* Manage your CPU and memory use, sessions are limited to 24 GB of memory and heavy jobs should leave room for other users.
+
+* You are limited to 5 active sessions at a time, quit sessions you are no longer using.
+
+* Runtimes should generally be less than 1 day, idle sessions are automatically suspended and long running sessions may be terminated. Anything bigger belongs on the DCC.
+
+* Problematic jobs (e.g. runaway CPU or memory usage) will be killed without notice.
+
+You can also connect to the individual servers directly via SSH (e.g. `ssh netid@hypatia.stat.duke.edu`), the same usage rules apply:
+
+* `hypatia.stat.duke.edu`, `katherinej.stat.duke.edu`, `germain.stat.duke.edu`
+
+
+## Printers
+
+The department has several printers available to faculty, postdocs, and graduate students (you must be connected to Dukeblue):
+
+* Old Chem 211 - HP Color Printer
+* Old Chem 211 - Ricoh B&W Printer
+* Old Chem 118 - HP Color Printer
+
+See [Adding departmental printers to your computer](https://stat.duke.edu/adding-departmental-printers-your-computer) for setup instructions for Mac and Windows. If you have an issue with a department printer email [stat-help@duke.edu](mailto:stat-help@duke.edu).
+
+Duke's [ePrint](https://oit.duke.edu/service/eprint/) service is also available, with an ePrint printer in Old Chem 211 and stations across campus. Setup instructions are available for [Mac](https://oit.duke.edu/help/articles/kb0020740/) and [Windows](https://oit.duke.edu/help/articles/kb0020487/).
 
 
 ## Getting help with DSS resources
