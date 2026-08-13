@@ -296,9 +296,9 @@ The available models change regularly, see the [Duke AI Suite Models Guide](http
 # DSS Computing Resources
 
 
-## RStudio Workbench
+## Posit Workbench
 
-The DSS has a Posit / RStudio Workbench license that will allow you to connect to an instance of RStudio (or Jupyter Lab or VS Code or Positron) in your browser while making use of the computing power of a remote multiprocessor server.
+The DSS has a Posit Workbench license that will allow you to connect to an instance of RStudio (or Jupyter Lab or VS Code or Positron) in your browser while making use of the computing power of a remote multiprocessor server.
 
 To access Posit Workbench:
 

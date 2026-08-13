@@ -1,5 +1,5 @@
 ---
-title: "Reproducibility, Version Control,<br/>and Literate Programming"
+title: "Reproducibility,<br/>Version Control, and<br/>Literate Programming"
 subtitle: "2026 DSS Bootcamp"
 author: "Colin Rundel"
 institute: ""
@@ -12,13 +12,13 @@ execute:
   echo: true
 ---
 
-# Some case studies
+# Some examples
 
 
 ## Bad spreadsheet merge kills depression paper, quick fix resurrects it
 
-- The authors informed the journal that the merge of lab results and other
-survey data used in the paper resulted in an error regarding the
+> The authors informed the journal that the merge of laboratory results and
+other survey data used in the paper resulted in an error regarding the
 identification codes. Results of the analyses were based on the data set
 in which this error occurred. Further analyses established the results
 reported in this manuscript and interpretation of the data are not correct.
@@ -26,7 +26,7 @@ reported in this manuscript and interpretation of the data are not correct.
 - **Original conclusion:** Lower levels of CSF IL-6 were associated with
 current depression and with future depression [...].
 
-- **Revised conclusion:** Higher levels of CSF IL-6 and IL-8 were
+- **Revised conclusion:** Higher levels of CSF IL-6 and CSF IL-8 were
 associated with current depression [...].
 
 ::: aside
@@ -36,14 +36,18 @@ Source: <http://retractionwatch.com/2014/07/01/bad-spreadsheet-merge-kills-depre
 
 ## Seizure study retracted after authors realize data got "terribly mixed"
 
-- From the authors of **Low Dose Lidocaine for Refractory Seizures in
-  Preterm Neonates**:
+From the authors of *Low Dose Lidocaine for Refractory Seizures in
+Preterm Neonates*:
 
-- *"The article has been retracted at the request of the authors. After
-  carefully re-examining the data presented in the article, they identified
-  that data of two different hospitals got terribly mixed. The published
-  results cannot be reproduced in accordance with scientific and clinical
-  correctness."*
+> The article has been retracted at the request of the authors. After
+carefully re-examining the data presented in the article, they identified
+that data of two different hospitals got terribly mixed. The published
+results cannot be reproduced in accordance with scientific and clinical
+correctness.
+
+The error was detected when the authors later used lidocaine for the same
+problem and did not get the same result, which led them to re-examine the
+original data.
 
 
 ::: aside
@@ -51,45 +55,32 @@ Source: [retractionwatch.com/2013/02/01/seizure-study-retracted-after-authors-re
 :::
 
 
-## Heart pulls sodium meta-analysis over duplicated, and now missing, data
-
-
-The journal Heart has retracted a 2012 meta-analysis after learning that
-  two of the six studies included in the review contained duplicated data.
-  Those studies, it so happens, were conducted by one of the co-authors.
-
-> The Committee considered that without sight of
-  the raw data on which the two papers containing the duplicate data were based,
-  their reliability could not be substantiated. Following inquiries, it turns
-  out that the raw data are no longer available having been lost as a result of
-  computer failure.
-
-
-:::aside
-*Source*: [retractionwatch.com/2013/05/02/heart-pulls-sodium-meta-analysis-over-duplicated-and-now-missing-data/](http://retractionwatch.com/2013/05/02/heart-pulls-sodium-meta-analysis-over-duplicated-and-now-missing-data/)
-:::
-
-
 ## Potti case
 
+::: {.small}
 Anil Potti was a rising star cancer researcher here at Duke in the School of Medicine. His lab's research focused on precision oncology (genomic signatures that could be used to predict patient response to chemotherapy).
 
 - Work was published in high-profile journals and received significant funding and attention; clinical trials using some of these results were also conducted.
 
-- Early whistleblower complaints from a medical student were ignored
+- Early whistleblower complaints from a medical student were dismissed; the student was persuaded not to report their concerns to the funding agency
 
 - Extensive work by statisticians (Baggerly and Coombes) at MD Anderson Cancer Center showed strong evidence that data were fabricated, manipulated, and misrepresented.
 
 - Downfall (in part) was triggered by falsifications of Potti's CV (claimed to have been a Rhodes Scholar)
 
 - Ultimately 11 papers were retracted
+:::
+
+::: aside
+*Source*: <https://en.wikipedia.org/wiki/Anil_Potti> and [retractionwatch.com/2012/02/14/the-anil-potti-retraction-record-so-far/](https://retractionwatch.com/2012/02/14/the-anil-potti-retraction-record-so-far/)
+:::
 
 
-## Clusterfake {.smaller}
+## Clusterfake
 
 ::: {.columns}
-::: {.column width="50%"}
-Shu, Mazar, Gino, Ariely, & Bazerman (2012), "Signing at the beginning makes ethics salient…." PNAS - was a very influential paper that claimed to have found that signing a declaration of honesty at the beginning of a survey reduced dishonest self-reports. It involved multiple independent studies and was widely cited in the literature.
+::: {.column .small width="50%"}
+Shu, Mazar, Gino, Ariely, & Bazerman (2012), "Signing at the beginning makes ethics salient ..." PNAS - was an influential paper that claimed to have found that signing a declaration of honesty at the beginning of a survey reduced dishonest self-reports. It involved multiple independent studies and was widely cited.
 
 The paper was retracted in 2021 due to concerns about data fabrication and manipulation in one of the studies.
 
@@ -122,12 +113,14 @@ Subsequently, additional issues were discovered in a different study by a differ
 
 ## Reproducibility in practice
 
+- Is the original data intact and available?
+<br><br>
 - Are the tables and figures reproducible from the code and data?
 <br><br>
 - Does the code actually do what you think it does?
 <br><br>
 - In addition to what was done, is it clear *why* it was done? (e.g., how
-were parameter settings chosen?)
+were parameter chosen?)
 <br><br>
 - Can the code be used for other data, especially future updates to the
   current data?
@@ -160,15 +153,15 @@ inseparable,
 
 ## Donald Knuth "Literate Programming" (1983)
 
-"Let us change our traditional attitude to the construction of programs:
+> Let us change our traditional attitude to the construction of programs:
 Instead of imagining that our main task is to instruct a *computer* what
 to do, let us concentrate rather on explaining to *human beings* what we
-want a computer to do."
-
-"The practitioner of literate programming [...] strives for a program that
+want a computer to do.
+> 
+> The practitioner of literate programming [...] strives for a program that
 is comprehensible because its concepts have been introduced in an order
 that is best for human understanding, using a mixture of formal and
-informal methods that reinforce each other."
+informal methods that reinforce each other.
 
 . . .
 
@@ -176,7 +169,7 @@ informal methods that reinforce each other."
 
 - Tools for putting them to practice have also been around.
 
-- They have never been as accessible as the current tools.
+- They have never been as accessible as they are now.
 
 
 
@@ -191,7 +184,7 @@ informal methods that reinforce each other."
 Scriptability
 
 ::: {.fragment .col-blue}
-R / Python
+R / Python / Julia
 :::
 
 :::
@@ -206,7 +199,7 @@ R / Python
 Literate Programming
 
 ::: {.fragment .col-blue}
-RMarkdown / Jupyter / Quarto
+RMarkdown / Quarto<br/> Jupyter / Marimo
 :::
 
 :::
@@ -227,7 +220,7 @@ Git / GitHub
 
 ## GitHub account
 
-::: {style="font-size: 80%;"}
+::: {.medium}
 - Create a GitHub account (unless you already have one) on [https://github.com/](https://github.com/)
 
 - One day you might want to show off your work, so choose a username you will be ok with disclosing to a future employer.
@@ -245,16 +238,16 @@ Some suggestions:
   - Avoid words laden with special meaning in programming.
 :::
 
-## Accessing RStudio Workbench
+## Accessing Posit Workbench
 
-To get started as quickly as possible, the preferred method is to use DSS RStudio server(s).
+To get started as quickly as possible, the preferred method is to use DSS Workbench server(s).
 
-To access RStudio Workbench:
+To access Posit Workbench:
 
 1.  Navigate to <https://rstudio.stat.duke.edu>
 2.  Log-in with your Duke NetID and password.
 
-If you are having trouble accessing RStudio Workbench see the next slide.
+If you are having trouble accessing Posit Workbench see the next slide.
 
 ::: aside
 If off campus, use the VPN to create a secure connection from your computer to Duke. <br/>
@@ -262,8 +255,9 @@ If you are on campus, be sure you are connected to the DukeBlue network.
 :::
 
 
-## DSS RStudio alternatives
+## DSS Workbench alternatives
 
+::: {.medium}
 If you cannot access RStudio via the DSS servers:
 
 - Make sure you are not using a custom DNS server
@@ -281,13 +275,21 @@ If you cannot access RStudio via the DSS servers:
     - Download R on your computer [here](http://archive.linux.duke.edu/cran/)
     - Download RStudio [here](https://posit.co/download/rstudio-desktop/)
     - Download Positron [here](https://positron.posit.co/download.html)
+:::
 
+## Logging in to Workbench
 
-## Bootcamp materials
+::: {.r-stack}
 
-- Everything from this computing bootcamp is available in the GitHub repository: [https://github.com/dukestatsci/computing_bootcamp_2026](https://github.com/dukestatsci/computing_bootcamp_2026)
+![](images/rstudio_login.png){width="85%" fig-align=center}
 
-- You'll learn how to get this on your computer shortly.
+![](images/rstudio_sessions.png){width="85%" fig-align=center .fragment}
+
+![](images/rstudio_new_session.png){width="85%" fig-align=center .fragment}
+
+![](images/rstudio_positron.png){width="85%" fig-align=center .fragment}
+
+:::
 
 # git and GitHub
 
@@ -301,6 +303,10 @@ If you cannot access RStudio via the DSS servers:
 
     - Track blame and/or praise
     - Remove the fear of breaking things
+
+- Critical for collaboration
+
+  - Include past-you + AI
 
 - Learning curve can be a bit steep, but when you need it you *REALLY* need it
 :::
@@ -328,8 +334,6 @@ If you cannot access RStudio via the DSS servers:
 - Tracks any type of file
 
 - Branching
-
-    - Smarter merges
 :::
 
 ::: {.column width="50%"}
@@ -342,13 +346,13 @@ knitr::include_graphics("images/distributed-vc-system.png")
 
 ## Verifying git exists
 
-git is already set-up on the DSS server(s). In the terminal tab you can verify this by running:
+git is already installed on the server(s). In the terminal tab you can verify this by running:
 
 ``` bash
 [cr173@hypatia ~]$ git --version
 ```
 ```
-## git version 2.20.1
+## git version 2.55.0
 ```
 
 <br/>
@@ -376,19 +380,27 @@ usethis::git_sitrep()
 ```
 
 ```
-## Git config (global)
-## ● Name: <unset>
-## ● Email: <unset>
-## ● Vaccinated: FALSE
-## ℹ See `?git_vaccinate` to learn more
-## ℹ Defaulting to https Git protocol
-## ● Default Git protocol: 'https'
-## GitHub
-## ● Default GitHub host: 'https://github.com'
-## ● Personal access token for 'https://github.com': <unset>
-## x Call `gh_token_help()` for help configuring a token
-## Git repo for current project
-## ℹ No active usethis project
+── Git global (user) 
+• Name: <unset>
+• Email: <unset>
+✖ Git user's name and email are not set.
+ℹ Configure using `use_git_config(user.name = "<your name>", user.email = "<your email>")`.
+• Global (user-level) gitignore file:
+• Vaccinated: FALSE
+ℹ See `usethis::git_vaccinate()` to learn more.
+• Default Git protocol: "https"
+• Default initial branch name: "main"
+
+── GitHub user 
+• Default GitHub host: "https://github.com"
+• Personal access token for "https://github.com": <unset>
+☐ To create a personal access token, call usethis::create_github_token().
+☐ To store a token for current and future use, call gitcreds::gitcreds_set().
+ℹ Read more in the Managing Git(Hub) Credentials article.
+
+── Active usethis project: "/home/vis/cr173" ──
+
+ℹ Active project is not a Git repo.
 ```
 
 # git and GitHub live demo
@@ -405,7 +417,7 @@ usethis::use_git_config(
 )
 ```
 
-You will need to do this configuration once on each machine in which you use git (e.g. the server and your laptop).
+You will need to do this configuration once on each environment (home directory) you use git (e.g. the server(s), your laptop, the DCC).
 
 This can also be done via the terminal with,
 
@@ -428,18 +440,25 @@ To verify you configured git correctly, run
 usethis::git_sitrep()
 ```
 ```
-## Git config (global)
-## ● Name: 'Colin Rundel'
-## ● Email: 'rundel@gmail.com'
-## ● Vaccinated: FALSE
-## ℹ See `?git_vaccinate` to learn more
-## ● Default Git protocol: 'https'
-## GitHub
-## ● Default GitHub host: 'https://github.com'
-## ● Personal access token for 'https://github.com': <unset>
-## x Call `gh_token_help()` for help configuring a token
-## Git repo for current project
-## ℹ No active usethis project
+── Git global (user) 
+• Name: "Colin Rundel"
+• Email: "rundel@gmail.com"
+• Global (user-level) gitignore file:
+• Vaccinated: FALSE
+ℹ See `usethis::git_vaccinate()` to learn more.
+• Default Git protocol: "https"
+• Default initial branch name: "main"
+
+── GitHub user 
+• Default GitHub host: "https://github.com"
+• Personal access token for "https://github.com": <unset>
+☐ To create a personal access token, call usethis::create_github_token().
+☐ To store a token for current and future use, call gitcreds::gitcreds_set().
+ℹ Read more in the Managing Git(Hub) Credentials article.
+
+── Active usethis project: "/home/vis/cr173" ──
+
+ℹ Active project is not a Git repo.
 ```
 
 You should see output similar to above with your details.
@@ -489,9 +508,9 @@ In order to get started, you need to obtain today's files from GitHub. The steps
 
 4.  Copy the link under the `Code` button to clone with *SSH*.
 
-5.  In RStudio go to `File > New Project > Version Control > Git`
+5.  In Positron go to `File > New Folder from Git`
 
-6.  Paste the URL, that you copied in step 4, in the box under `Repository URL`
+6.  Paste the ssh URL, that you copied in step 4, in the box under `Repository URL`
 
 You now should have all the files in the repository in a directory on the server or your own computer.
 
@@ -522,7 +541,7 @@ We will now make sure that everything is working correctly by making changes to 
 
 - Make a small change to `README.md` (i.e. add your name) and save the file.
 
-- Stage & commit that change using RStudio's git GUI
+- Stage & commit that change using Positron's git GUI
 
 - Push the changes to GitHub
 
@@ -673,10 +692,6 @@ The `echo: false` option disables the printing of code (only output is displayed
 
 ## R Markdown resources
 
-- In RStudio, go to `Help > Cheatsheets` and select
-    - R Markdown Cheat Sheet
-    - R Markdown Reference Guide
-
 - Check out the official R Markdown book:
   [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
   by Yihui Xie, J. J. Allaire, and Garrett Grolemund
@@ -689,6 +704,7 @@ The `echo: false` option disables the printing of code (only output is displayed
 
 ## Quarto resources
 
+::: {.medium}
 - Much of the syntax is shared with R Markdown - so previous resources are a good place to start
 
 - [quarto.org](https://quarto.org/)
@@ -700,6 +716,15 @@ The `echo: false` option disables the printing of code (only output is displayed
   - [Getting Started with Quarto](https://rstudio-conf-2022.github.io/get-started-quarto/)
 
   - [From R Markdown to Quarto](https://rstudio-conf-2022.github.io/rmd-to-quarto/)
+
+- posit::conf workshops
+
+  - [Quarto for R & RStudio](https://posit-conf-2023.github.io/quarto-r/) (2023)
+
+  - [Intro to Quarto](https://posit-conf-2024.github.io/quarto-intro/) and [Quarto Websites](https://posit-conf-2024.github.io/quarto-websites/) (2024)
+
+  - [Branded Websites, Presentations, Dashboards, and PDFs with Quarto](https://posit-conf-2025.github.io/quarto-brand/) and [Extending Quarto](https://posit-conf-2025.github.io/quarto-extend/) (2025)
+:::
 
 
 # Quarto / RMarkdown demo
@@ -719,7 +744,7 @@ The `echo: false` option disables the printing of code (only output is displayed
   - The core tidyverse packages are `ggplot2`, `tibble`, `tidyr`,
     `readr`, `purrr`, `dplyr`, `stringr`, and `forcats`.
 
-- This package is already installed for you on the DSS servers. If needed, you
+- This package is already installed for you on the servers. If needed, you
   can install it by running the following in the `Console`:
   ```{r eval=FALSE}
   install.packages("tidyverse")
@@ -729,7 +754,7 @@ The `echo: false` option disables the printing of code (only output is displayed
 
 ## A note on environments
 
-- Your R Markdown / Quarto document and your Console do not share their global environments.
+- Your Quarto document and your Console do not share their global environments.
 
   - This is different than the computational model of Jupyter Notebooks!
 
@@ -737,7 +762,7 @@ The `echo: false` option disables the printing of code (only output is displayed
   errors.
 
 - This also means any packages or data needed for your analysis need to be loaded in
-  your R Markdown document as well.
+  your Quarto document as well.
 
 
 
@@ -772,28 +797,4 @@ To get started,
 
 ::: aside
 These slides were made with Quarto and `revealjs`.
-:::
-
-
-## R programming resources
-
-::: {style="font-size: 80%;"}
-- Style
-
-    - [Tidyverse style guide](http://style.tidyverse.org/)
-    - [Google's R style guide](https://google.github.io/styleguide/Rguide.html)
-
-- Beginner
-
-    - [swirl](https://swirlstats.com/): swirl teaches you R programming and data science interactively, at your own pace, and right in the R console
-    - [R manuals](https://cran.r-project.org/manuals.html)
-    - [R for Data Science](https://r4ds.hadley.nz) (2nd edition) by Hadley Wickham,
-      Mine Çetinkaya-Rundel, and Garrett Grolemund
-    - [R Cookbook](https://rc2e.com/) (2nd edition) by JD Long and Paul Teetor
-
-- Next steps
-
-    - [Advanced R](https://adv-r.hadley.nz/) by Hadley Wickham
-    - [R Packages](https://r-pkgs.org/) by Hadley Wickham
-
 :::
