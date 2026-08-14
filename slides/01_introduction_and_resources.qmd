@@ -36,14 +36,12 @@ By the end of today's workshop, you will
 
 ## Duke NetID
 
-Your Duke NetID is the electronic key for accessing most Duke resources.
+Your Duke NetID is the key for accessing most Duke resources. Most important resources are locked down behind the Duke Shibboleth login service.
 
-Most important resources are locked down behind the Duke Shibboleth login service.
-
-![](images/shib.png){width=75% fig-align="center"}
+![](images/shib.png){width=50% fig-align="center"}
 
 ::: {.aside}
-It is highly recommended that you make use of Duke Unlock (passkey) to avoid multi-factor authentication
+It is highly recommended that you make use of Duke Unlock (passkey) to "skip" multi-factor authentication
 :::
 
 
@@ -82,6 +80,7 @@ With your NetID and password, you can access your email on the web at
 
 ## Duke WiFi
 
+::: {.small}
 Duke network connections:
 
 - Dukeblue (**recommended**)
@@ -94,18 +93,21 @@ Duke network connections:
 
 - eduroam (education roaming)
 
-  - Secure network available at participating universities and research institutions worldwide; log in with your `netid@duke.edu` credentials when visiting other campuses or conference venues
+  - Secure network available at participating universities and research institutions worldwide; log in with your `netid@duke.edu` credentials when visiting other campuses or conference venues. Configure it before you travel.
 
 - Visitor
 
-  - Unsecured guest network for campus visitors; does not give access to Duke's private network or resources - as a Duke community member you should be using Dukeblue instead
-
+  - Unsecured guest network for campus visitors; does not give access to Duke's private network or resources
+:::
 
 ## Multi-factor authentication
 
 To access some resources on campus (e.g. mail, VPN, etc.) you will need to periodically undergo MFA when you log in.
 
-You will need to set up Duo first, but once that is done Duke Unlock (passkey) is the better option for day-to-day use - see instructions at <https://idms-mfa.oit.duke.edu/mfa/home>
+You will need to set up Duo first, but once that is done Duke Unlock (passkey) is the better option for day-to-day use 
+
+- see instructions at <https://idms-mfa.oit.duke.edu/mfa/home>
+
 
 
 ## Duke VPN
@@ -158,9 +160,9 @@ You will need to set up Duo first, but once that is done Duke Unlock (passkey) i
 
 * These addresses are not reachable from the public internet; you must be on campus (Dukeblue) or connected to the VPN to reach them.
 
-* The hostnames for these machines are served by Duke's private DNS and only resolve when your device is using Duke's DNS servers, e.g. `rstudio.stat.duke.edu` is `10.138.17.14`.
+* The hostnames for these machines are served by Duke's private DNS and only resolve when your device is using Duke's DNS servers
 
-* Connecting to Dukeblue or the VPN configures all of this automatically, but a manually configured DNS server (e.g. `1.1.1.1` or `8.8.8.8`) will override it and these hostnames will fail to resolve.
+* Connecting to Dukeblue or the VPN configures all of this automatically, but manually configured DNS servers (e.g. `1.1.1.1` or `8.8.8.8`) can override it and these hostnames will fail to resolve.
 
 
 
@@ -181,6 +183,7 @@ You will need to set up Duo first, but once that is done Duke Unlock (passkey) i
     - Microsoft Office
     - MATLAB & Simulink
     - SAS
+    - ChatGPT
   :::
   
   ::: {.column width='50%'}
@@ -232,32 +235,24 @@ Duke OIT offers virtual software containers and semester-long virtual machines.
   applications such as RStudio, Eclipse, Jupyter Notebooks, MATLAB, and others for a semester. These are run through your
   web browser; no software download is required. 
   
-  Two containers likely to be most useful are:
-    
-    - `RStudio` - statistics application with R Markdown and knitr support
-    - `Jupyter` - interactive data science and scientific computing notebooks
+If you are TAing one of our undergraduate courses you will be using using and supporting these.
 
 ## Virtual computing - VMs
 
-- [Virtual Machine (VM)](https://vcm.duke.edu/) – Your Duke VM is like having a
-  second computer that lives at Duke. You can log into and use your VM 
-  from your own machine. It allows you to access specialized software without 
-  installing it on your own computer, host your own server for development 
-  projects and coursework, or customize your own environment to use for the 
-  semester.
+[Virtual Machine (VM)](https://vcm.duke.edu/) – a small personal VM for your projects / experimentation / learning.
   
-    - Run Windows or Linux VMs
-    - Computing resources are light: 2 CPU cores, 4 GB of memory, and 50 GB of storage
-    - By default each VM will power down at 6:00 am every morning
-      - Can be disabled via the "Automatic power downs" option in VCM
+  - Run Windows or Linux VMs
+  - Computing resources are light: 2 CPU cores, 4 GB of memory, and 50 GB of storage
+  - By default each VM will power down at 6:00 am every morning
+    - Can be disabled via the "Automatic power downs" option in VCM
 
 ## Research Toolkits
 
 <https://rtoolkits.web.duke.edu/> is a tool provided by Duke Research Computing to access resources for the DCC.
 
-Everyone should be able to log in and see that they are a member of the "statdept" group.
+If you login you should see that you are a member of the "statdept" group.
 
-**For PhD students** - You can claim the "Doctoral Resources" allocation to get access to the doctoral student allocation on the DCC.
+**For PhD students** - You can claim the "Doctoral Resources" allocation to get access to the doctoral student partition on the DCC.
 
 
 ![](images/DoctoralClaimButton.png){width=300 fig-align="center"}
@@ -278,6 +273,10 @@ infrastructure and application support.
   
 - Live service status dashboard available at [status.oit.duke.edu](https://status.oit.duke.edu/) or [@DukeOIT](https://x.com/DukeOIT)
 
+For research computing specific questions (DCC, storage, virtual machines, etc.) [Duke Research Computing](https://oit.duke.edu/service/research-computing) offers support, consultation, and training.
+
+- Email [rescomputing@duke.edu](mailto:rescomputing@duke.edu)
+
 
 ## AI @ Duke
 
@@ -289,11 +288,11 @@ Duke provides a number of AI tools and services that are available to you as gra
 
 * Claude Code & Cowork - coming this fall! Duke has signed an agreement with Anthropic and both tools will be available on a pay-as-you-go basis, more information to come.
 
-* [DukeGPT](https://chat.ai.duke.edu) - a Duke-managed chat interface for exploring and comparing a variety of AI models, including open-source models
+* [DukeGPT](https://chat.ai.duke.edu) - a Duke-managed chat interface backed by a variety of AI models, including open-source models (LiteLLM)
 
 * [AI Dashboard](https://dashboard.ai.duke.edu) - MyGPT Builder for custom AI assistants & the AI Gateway for API access to Duke-supported models
 
-There is also access to Microsoft Copilot with your NetID and Zoom AI Companion for meeting summaries.
+There is also access to Microsoft Copilot with your NetID
 :::
 
 
@@ -310,7 +309,7 @@ The Duke AI Suite (DukeGPT, MyGPT Builder, and the AI Gateway) provides access t
 
 * Specialty models - reasoning, coding, transcription, and embedding models
 
-* `duke-current` - an alias that always points to a highly capable current model, useful for applications built on the AI Gateway
+* `duke-current` - an alias that always points to a capable current model
 
 The available models change regularly, see the [Duke AI Suite Models Guide](https://oit.duke.edu/help/articles/kb0038832/) for the current list and details on each model.
 
@@ -328,13 +327,13 @@ The DSS has a Posit Workbench license that will allow you to connect to an insta
 
 To access Posit Workbench:
 
-1. If off campus, use the VPN to create a secure connection from your computer 
+1. Navigate to: <https://rstudio.stat.duke.edu>
+
+2. If off campus, use the VPN to create a secure connection from your computer 
    to Duke. 
    
    If you are on campus, be sure you are connected to the Dukeblue
    network.
-
-2. Navigate to: <https://rstudio.stat.duke.edu>
 
 3. Log-in with your NetID and password.
 
@@ -356,25 +355,19 @@ The DSS servers are a shared resource for the whole department, so please be con
 * Problematic jobs (e.g. runaway CPU or memory usage) will be killed without notice.
 
 * Your home directory is shared across all DSS servers. The department filesystem is backed up, but recovery requires human intervention (email [stat-help@duke.edu](mailto:stat-help@duke.edu)) - keeping your own copies (e.g. GitHub, OneDrive) is still the fastest way to recover.
+:::
+
+## Servers
 
 You can also connect to the individual servers directly via SSH (e.g. `ssh netid@server.stat.duke.edu`), the same usage rules apply:
 
 
-::: {.columns .small}
-::: {.column width="33%"}
-`hypatia.stat.duke.edu`
-:::
+* `hypatia.stat.duke.edu`
 
-::: {.column width="33%"}
-`katherinej.stat.duke.edu`
-:::
+* `katherinej.stat.duke.edu`
 
-::: {.column width="33%"}
-`germain.stat.duke.edu`
-:::
-:::
+* `germain.stat.duke.edu`
 
-:::
 
 ## Printers
 
