@@ -95,6 +95,7 @@ Research Computing now has a policy on AI use on the cluster, some highlights:
   * Metadata and utilization by group (and sometimes user) are made available to all cluster users and Duke stakeholders.
 
 
+
 # Duke Data Classification
 
 ## Data Classification Standard
@@ -133,15 +134,30 @@ See the [Data Classification Standard](https://security.duke.edu/policies-proced
 
 * Before putting data on any Duke service, check the [Duke Services and Data Classification](https://security.duke.edu/policies-procedures-and-standards/data-security/duke-services-and-data-classification) chart for what is approved at each level.
 
-## Data & Other Services
+## Data & Other Services (AI)
 
-* Duke's data protections do not follow your data - Restricted or Sensitive data can only go into a third party service if Duke has a data protection agreement (or similar contract) in place with that vendor.
+* Duke's data protections do not follow your data - Restricted or Sensitive data should only go into a third party service if Duke has a data protection agreement (or similar contract) in place with that vendor.
 
 * A useful rule of thumb: if you did not log in with your NetID via Duke's Shibboleth SSO, the service very likely does not have such an agreement.
 
 * It is your responsibility to know what services you are using and what data you are sharing with them. Getting this wrong can have real consequences for both you and Duke.
 
 * For example, uploading your PIs unpublished research data or student records to a personal ChatGPT or Claude account is not ok - use Duke's AI tools (ChatGPT for Education, DukeGPT, the AI Gateway) instead, which are covered by Duke agreements.
+
+## Some Principals for AI use
+
+* Data classification governs data handling
+
+* Users are accountable for outputs they adopt
+
+* Attribution follows the norms of the venue
+
+* Credentials and authentication secrets stay out of Generative AI tools
+
+* Agents and automated workflows require architectural constraints
+
+* Understand third-party terms.
+
 
 # Using the DCC
 
