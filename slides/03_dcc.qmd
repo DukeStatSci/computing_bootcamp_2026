@@ -121,7 +121,7 @@ See the [Data Classification Standard](https://security.duke.edu/policies-proced
 | Restricted | Unpublished research data, non-public financial records, data covered by NDAs, library transaction records |
 | Public | Published research, university websites, campus maps, directory listings |
 
-## Classified data & the DCC
+## Data & the DCC
 
 * The DCC's security and compliance provisions are sufficient for Public and Restricted data only.
 
@@ -133,6 +133,15 @@ See the [Data Classification Standard](https://security.duke.edu/policies-proced
 
 * Before putting data on any Duke service, check the [Duke Services and Data Classification](https://security.duke.edu/policies-procedures-and-standards/data-security/duke-services-and-data-classification) chart for what is approved at each level.
 
+## Data & Other Services
+
+* Duke's data protections do not follow your data - Restricted or Sensitive data can only go into a third party service if Duke has a data protection agreement (or similar contract) in place with that vendor.
+
+* A useful rule of thumb: if you did not log in with your NetID via Duke's Shibboleth SSO, the service very likely does not have such an agreement.
+
+* It is your responsibility to know what services you are using and what data you are sharing with them. Getting this wrong can have real consequences for both you and Duke.
+
+* For example, uploading your PIs unpublished research data or student records to a personal ChatGPT or Claude account is not ok - use Duke's AI tools (ChatGPT for Education, DukeGPT, the AI Gateway) instead, which are covered by Duke agreements.
 
 # Using the DCC
 
@@ -155,9 +164,7 @@ See the [Data Classification Standard](https://security.duke.edu/policies-proced
 
 * `/group` - software installations, lab specific scripts, moderately sized data sets or intermediate results that are needed for longer than 75 days.
 
-* `/work` - large data sets under analysis, intermediate results. Files older than 75 days are automatically purged!
-
-* `/cwork/` - experimental version of /work for large data sets under analysis, intermediate data, and preliminary results. Files older than 75 days are automatically purged!
+* `/work`, `/cwork` - large data sets under analysis, intermediate results. Files older than 75 days are automatically purged!
 
 * `/datacommons` - long term storage for source data and results data
 
@@ -165,9 +172,8 @@ See the [Data Classification Standard](https://security.duke.edu/policies-proced
 
 :::
 
-::: {.aside}
-For `/work/` and `/cwork/` you may need to create your own folder for your use with `mkdir <netid>`.
-:::
+Since you've been added to the `statdept` group you will have access `/hpc/group/statdept` - this is a shared resource across the department use sparringly. If you have heavier needs you should be working with a PI - use their group's allocation.
+
 
 
 ## Accessing the DCC
@@ -176,7 +182,9 @@ All access to the DCC compute nodes is managed through the SLURM job scheduler.
 
 Traditionally, users would log in to the cluster via SSH and then submit jobs to the scheduler. 
 
-This is still the preferred approach for large scale jobs but is beyond the scope of today's workshop. If this is of interest to you, I strongly recommend [RC training](https://oit-rc.pages.oit.duke.edu/rcsupportdocs/help/training/).
+This is still the preferred approach for large scale jobs but is beyond the scope of today's workshop. 
+
+If this is of interest to you, I strongly recommend [RC training](https://oit-rc.pages.oit.duke.edu/rcsupportdocs/help/training/).
 
 
 ## Open OnDemand
@@ -219,7 +227,7 @@ OnDemand generally will let you know which partitions you have access to, but th
 General use partitions:
 
 ::: {.medium}
-* **interactive** for short interactive sessions, default resources are low.
+* **interactive** for short interactive sessions, resource limits are lower.
 * **common** for jobs that will run on the DCC core nodes
 * **gpu-common** for jobs that will run on DCC GPU nodes
 * **scavenger** for jobs that will run on lab-owned nodes in “low priority” (kill and requeue preemption).
@@ -230,13 +238,13 @@ General use partitions:
 
 Interactive partition:
 
-* 10 CPUs, 64 GB memory, runtime of up to 1 day
+* 10 CPUs, 64 GB memory, runtime <1 day
 
-All other partitions:
+All other partitions (limit total for all jobs):
 
-* Total memory per user account: 1.5 TB
-* Total CPUs per user account: 400
-* Queued jobs per user per account: 400
+* 1.5 TB memory
+* 400 CPUs
+* 400 queued jobs
 
 ## Important Job Options
 
